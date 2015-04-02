@@ -1,0 +1,4 @@
+#!/bin/bash
+
+./transposeCSV.py BDNCases.csv
+./transposeCSV.py BFitCases.csv
