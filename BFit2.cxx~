@@ -1237,7 +1237,6 @@ int BFit () {
 	delete [] sY3z1;
 	
 	return iReturn;
-
 }
 
 void HistPrep (TH1 *h, Int_t rebin, Int_t binWidth, char* pop) {

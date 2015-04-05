@@ -2,20 +2,24 @@
 
 bash transposeMetadata # make sure the metadata files are up to date
 
-SAVE=0
+SAVE=1
 
-#BDN="137i07"
+BDN="137i07"
 #BFIT="137i07"
-#BFIT="137i07_1"
+BFIT="137i07_1"
+#BFIT="137i07_2"
+#BFIT="137i07_3"
+#BFIT="137i07_4"
+#BFIT="137i07_5"
 #BFIT="137i07Br_0"
 #BFIT="137i07Br_1"
 #BFIT="137i07BR_0"
 #BFIT="137i07BR_1"
 #BFIT="137i07BR_2"
 ###############################
-BDN="134sb02"
+#BDN="134sb02"
 #BFIT="134sb02Br"
-BFIT="134sb02Br_2014"
+#BFIT="134sb02Br_2014"
 #BFIT="134sb02Br_0"
 #BFIT="134sb02Br_1"
 #BFIT="134sb02Br_2"
@@ -36,7 +40,7 @@ else
 fi
 cp -a BFit.root $ROOTFILE #BFit2_$BFIT.root
 #####################
-
+echo ^G
 
 #./BFit2 137i07 137i07Br
 #./BFit2 134sb02 134sb02Br

@@ -341,9 +341,9 @@ int BFit () {
 	fyAll->SetParErrors(err);
 	//if (stBFitCase.pbToggle[rho]) fyAll->SetParLimits(rho,0,1);
 	//fyAll->SetParLimits(gammaT1,-0.2,0.2);
-	fyAll->SetParLimits(r2,-100,1e4);
-	fyAll->SetParLimits(epsV,-1,1);
-	fyAll->SetParLimits(gammaT2,0,0.1);
+	//fyAll->SetParLimits(r2,-100,1e4);
+	//fyAll->SetParLimits(epsV,-1,1);
+	//fyAll->SetParLimits(gammaT2,0,0.1);
 // Print seed values that are assigned to the fit function
 	cout << "PARAMETER SEED VALUES" << endl << separator << endl;
 	cout << setw(14) << "Par name" << setw(10) << "Varying?" << "\t" << "Par init val and step" << endl << separator << endl;
