@@ -1,0 +1,5 @@
+#!/bin/bash
+
+gedit BFit2.cxx BFit2Model.cxx BFit2Populations.cxx BFit2Model.h drawBFit.C exBFit &
+gedit BMonteCarlo.cxx BMC_runDescriptions.txt &
+#excel BFitCases.csv &

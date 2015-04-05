@@ -4,16 +4,18 @@ bash transposeMetadata # make sure the metadata files are up to date
 
 SAVE=0
 
-BDN="137i07"
+#BDN="137i07"
+#BFIT="137i07"
+#BFIT="137i07_1"
 #BFIT="137i07Br_0"
 #BFIT="137i07Br_1"
 #BFIT="137i07BR_0"
 #BFIT="137i07BR_1"
-BFIT="137i07BR_2"
+#BFIT="137i07BR_2"
 ###############################
-#BDN="134sb02"
+BDN="134sb02"
 #BFIT="134sb02Br"
-#BFIT="134sb02Br_2014"
+BFIT="134sb02Br_2014"
 #BFIT="134sb02Br_0"
 #BFIT="134sb02Br_1"
 #BFIT="134sb02Br_2"

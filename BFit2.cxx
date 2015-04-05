@@ -39,16 +39,20 @@ using namespace std;
 
 //#include "TVirtualFitter.h"
 
+
 /////////////////////////////////////////////////////////////////////////////
 // Global variables
 /////////////////////////////////////////////////////////////////////////////
-char parNames[30][5] = {"nCyc", "dt", "DC", "r1", "r2", "r3", "p", "rho", "epsT", "epsU", "epsV", "epsW", "epsX", "epsY", "epsZ", "gT1", "gT2", "gT3", "gU1", "gU2", "gU3"};
 
 // Structs
 BDNCase_t	stBDNCases[FILE_ROWS_BDN];
 BFitCase_t	stBFitCases[FILE_ROWS_BFit];
 Int_t		iBDNCaseIndex, iBFitCaseIndex; // global index to identify case
 Int_t		iNumStructs_BDN, iNumStructs_BFit;
+
+namespace BFitNamespace {
+char parNames[30][5] = {"nCyc", "dt", "DC", "r1", "r2", "r3", "p", "rho", "epsT", "epsU", "epsV", "epsW", "epsX", "epsY", "epsZ", "gT1", "gT2", "gT3", "gU1", "gU2", "gU3"};
+
 // These never change during fitting and are set in BFit()
 Int_t		nPars; // number of model parameters
 Double_t	iota; // tiny number for avoiding divide-by-0
@@ -98,6 +102,8 @@ Double_t	eU10, eU20, eU30; // decay from t=0 for background parts: exp(-t/tT1), 
 Double_t	eT1nCap, eT2nCap, eT3nCap, eU1nCap, eU2nCap, eU3nCap; // decay from last injection for capture parts: exp(-(t-tB-(nCap-1)*tA)/tT1), ...
 Double_t	T1val, T2val, T3val, U1val, U2val, U3val, V1val, V2val, V3val, W1val, W2val, W3val, Z1val, Z2val, Z3val, X2val, X3val, Y2val, Y3val; // value of each pop
 /////////////////////////////////////////////////////////////////////////////
+Int_t sema = 0;
+}
 
 // Functions
 Double_t intErr (TF1*, Double_t*, Double_t, Double_t);
@@ -1202,6 +1208,34 @@ int BFit () {
 	cout << "Elapsed time = " << (Float_t)(timerStop-timerStart)/CLOCKS_PER_SEC << " sec." << endl << endl;
 	
 	delete [] lastPar;
+	delete [] timeOfCapt;
+	delete [] sigmaT1;
+	delete [] sigmaT2;
+	delete [] sigmaT3;
+	delete [] sigmaV1;
+	delete [] sigmaV2;
+	delete [] sigmaV3;
+	delete [] sigmaW1;
+	delete [] sigmaW2;
+	delete [] sigmaW3;
+	delete [] sigmaZ1;
+	delete [] sigmaZ2;
+	delete [] sigmaZ3;
+	delete [] sigmaX2;
+	delete [] sigmaX3;
+	delete [] sigmaY2;
+	delete [] sigmaY3;
+	delete [] sY2v1;
+	delete [] sY2w1;
+	delete [] sY2z1;
+	delete [] sY3v2;
+	delete [] sY3w2;
+	delete [] sY3z2;
+	delete [] sY3x2;
+	delete [] sY3v1;
+	delete [] sY3w1;
+	delete [] sY3z1;
+	
 	return iReturn;
 }
 
@@ -1217,7 +1251,7 @@ void HistPrep (TH1 *h, Int_t rebin, Int_t binWidth, char* pop) {
 	h->SetXTitle(xTitle);
 	h->SetYTitle(yTitle);
 	h->SetTitle(Title);
-	h->GetXaxis()->SetRangeUser(0,tCyc);
+	h->GetXaxis()->SetRangeUser(0,BFitNamespace::tCyc);
 	h->GetYaxis()->SetTitleOffset(1.4);
 }
 
