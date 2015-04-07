@@ -341,9 +341,9 @@ int BFit () {
 	fyAll->SetParErrors(err);
 	//if (stBFitCase.pbToggle[rho]) fyAll->SetParLimits(rho,0,1);
 	//fyAll->SetParLimits(gammaT1,-0.2,0.2);
-	fyAll->SetParLimits(r2,-100,1e4);
-	fyAll->SetParLimits(epsV,-1,1);
-	fyAll->SetParLimits(gammaT2,0,0.1);
+	//fyAll->SetParLimits(r2,-100,1e4);
+	//fyAll->SetParLimits(epsV,-1,1);
+	//fyAll->SetParLimits(gammaT2,0,0.1);
 // Print seed values that are assigned to the fit function
 	cout << "PARAMETER SEED VALUES" << endl << separator << endl;
 	cout << setw(14) << "Par name" << setw(10) << "Varying?" << "\t" << "Par init val and step" << endl << separator << endl;
@@ -652,6 +652,7 @@ int BFit () {
 	char yTitle[100];
 	sprintf(yTitle, "Detections / %d ms", Nint(dRebinFactor));
 	h1->SetYTitle(yTitle);
+	h1->GetYaxis()->SetTitleOffset(1.4);
 	fyAll ->Draw("SAME");
 	foU1->Draw("SAME");
 	foT1->Draw("SAME");
@@ -669,7 +670,9 @@ int BFit () {
 //	printf("\nY Range is %f to %f\n\n",yMin,yMax);
 	yRange = yMax - yMin;
 	yMin = yMin - 0.05*yRange;
-	yMax = yMax + 0.10*yRange;
+	yMax = yMax + 0.25*yRange;
+//	yMin = 0.0;
+//	yMax = 14000.0;
 	//printf("Range = (%f,%f)\n", yMin, yMax);
 	h1->GetYaxis()->SetRangeUser(yMin,yMax);
 //	h2->GetYaxis()->SetRangeUser(yMin,yMax);

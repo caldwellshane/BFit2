@@ -1,4 +1,4 @@
-Timestamp = Sat Apr  4 23:06:24 2015
+Timestamp = Sun Apr  5 17:45:14 2015
 
 Importing metadata from CSV files...
 Imported 68 BDN cases
@@ -9804,7 +9804,7 @@ New pars (9676): DC=7.2650e+00 r1=7.9415e+01 r2=7.0659e+02 p=6.8861e-01 epsV=1.8
  THERE ARE NO MINOS ERRORS TO CALCULATE.
 New pars (9677): DC=7.2692e+00 r1=9.1303e+01 r2=8.0033e+02 p=6.0657e-01 epsV=1.2384e+00 epsZ=1.2819e+00 
 
-Fitting done in 19910000 clicks (19.910000 seconds).
+Fitting done in 19870000 clicks (19.870001 seconds).
 Fit status = 4000
 Cov status = 1
 
@@ -9857,7 +9857,7 @@ V eff       	    -0.28084    -0.71544     0.95256     -0.6766           1     -0
 Z eff       	     0.16133     0.74143    -0.96759      0.6016     -0.9815           1
 
 Integrals computed in 380000 clicks (0.380000 seconds).
-Errors computed in 21300000 clicks (21.299999 seconds).
+Errors computed in 21260000 clicks (21.260000 seconds).
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 NUMBER OF BETAS DETECTED, by population:
@@ -9875,6 +9875,6 @@ All integral = 5505230.2 +/- 2311.0
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-BFit2 done. Timer = 23.85 sec.
-Elapsed time = 23.78 sec.
+BFit2 done. Timer = 23.8 sec.
+Elapsed time = 23.73 sec.
 

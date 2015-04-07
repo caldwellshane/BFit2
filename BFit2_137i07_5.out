@@ -1,11 +1,11 @@
-Timestamp = Sat Apr  4 23:04:04 2015
+Timestamp = Sun Apr  5 17:12:59 2015
 
 Importing metadata from CSV files...
 Imported 68 BDN cases
 Imported 48 BFit cases
 Performing BFit with BDN case 137i07 and BFit case 137i07_5
 
-BFit started. Timer = 0.07 sec.
+BFit started. Timer = 0.06 sec.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 BETA SINGLES MODEL
@@ -6489,7 +6489,7 @@ Capt eff    	     0.41912    0.037735    -0.47459           1    -0.65122     0.
 V eff       	    -0.31578    -0.72485     0.95031    -0.65122           1    -0.98143
 Z eff       	      0.1999     0.74078    -0.96317     0.59088    -0.98143           1
 
-Integrals computed in 380000 clicks (0.380000 seconds).
+Integrals computed in 360000 clicks (0.360000 seconds).
 Errors computed in 14490000 clicks (14.490000 seconds).
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -6508,6 +6508,6 @@ All integral = 5505274.0 +/- 2658.2
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-BFit2 done. Timer = 17.03 sec.
-Elapsed time = 16.96 sec.
+BFit2 done. Timer = 17 sec.
+Elapsed time = 16.94 sec.
 

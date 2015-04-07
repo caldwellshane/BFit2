@@ -4,13 +4,38 @@ bash transposeMetadata # make sure the metadata files are up to date
 
 SAVE=1
 
+#BDN="135sb08"
+#BFIT="135sb08"
+#BFIT="135sb08_01"
+#BFIT="135sb08_02"
+#BFIT="135sb08_03"
+#BFIT="135sb08_04"
+#BFIT="135sb08_05"
+##############################
 BDN="137i07"
 #BFIT="137i07"
 #BFIT="137i07_1"
-BFIT="137i07_2"
+#BFIT="137i07_2"
 #BFIT="137i07_3"
 #BFIT="137i07_4"
 #BFIT="137i07_5"
+#BFIT="137i07_6"
+#BFIT="137i07_7"
+#BFIT="137i07_8"
+#BFIT="137i07_9"
+#BFIT="137i07_10"
+#BFIT="137i07_11"
+#BFIT="137i07_12"
+#BFIT="137i07_13"
+#BFIT="137i07_14"
+#BFIT="137i07_15"
+#BFIT="137i07_16"
+#BFIT="137i07_17"
+#BFIT="137i07_18"
+#BFIT="137i07_19"
+#BFIT="137i07_20"
+#BFIT="137i07_21"
+BFIT="137i07_22"
 #BFIT="137i07Br_0"
 #BFIT="137i07Br_1"
 #BFIT="137i07BR_0"
@@ -34,13 +59,13 @@ ROOTFILE="BFit2_"$BFIT".root"
 #####################
 if (($SAVE)); then
 	rm $OUTFILE #BFit2_$BFIT.out
-	./BFit2 $BDN $BFIT > $OUTFILE 
+	./BFit2 $BDN $BFIT > $OUTFILE
 else
 	./BFit2 $BDN $BFIT
 fi
 cp -a BFit.root $ROOTFILE #BFit2_$BFIT.root
 #####################
-echo ^G
+echo -en "\007"
 
 #./BFit2 137i07 137i07Br
 #./BFit2 134sb02 134sb02Br

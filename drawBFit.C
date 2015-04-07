@@ -3,7 +3,7 @@
 	
 	Int_t test	= 0;
 	Int_t data	= 1;
-	Int_t MC	= 0;
+	Int_t MC	= 1;
 	
 	if (test) {
 		cTest->Close(); cTest->Draw();

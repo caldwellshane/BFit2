@@ -114,7 +114,7 @@ Double_t BFitNamespace::yAll(Double_t *t, Double_t *a) {
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 bool BFitNamespace::CompareParArrays (const Double_t *par1, const Double_t *par2, size_t n, Double_t eps) {
 	if (sizeof(par1) != sizeof(par2)) cout << "Tried to compare to non-equal-length arrays! Results not guaranteed." << endl << endl;
-	for (size_t i=0; i<n; i++) if (fabs(par1[i]-par2[i]) > eps) return false;
+	for (size_t i=0; i<n; i++) if ( fabs(par1[i]-par2[i]) > fabs(eps*par2[i]) ) return false;
 	return true;
 }
 

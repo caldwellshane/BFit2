@@ -652,6 +652,7 @@ int BFit () {
 	char yTitle[100];
 	sprintf(yTitle, "Detections / %d ms", Nint(dRebinFactor));
 	h1->SetYTitle(yTitle);
+	h1->GetYaxis()->SetTitleOffset(1.4);
 	fyAll ->Draw("SAME");
 	foU1->Draw("SAME");
 	foT1->Draw("SAME");
@@ -669,7 +670,9 @@ int BFit () {
 //	printf("\nY Range is %f to %f\n\n",yMin,yMax);
 	yRange = yMax - yMin;
 	yMin = yMin - 0.05*yRange;
-	yMax = yMax + 0.10*yRange;
+	yMax = yMax + 0.30*yRange;
+//	yMin = 0.0;
+//	yMax = 14000.0;
 	//printf("Range = (%f,%f)\n", yMin, yMax);
 	h1->GetYaxis()->SetRangeUser(yMin,yMax);
 //	h2->GetYaxis()->SetRangeUser(yMin,yMax);
