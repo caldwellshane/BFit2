@@ -193,9 +193,9 @@ void BFitNamespace::ComputeParameterDependentVars (Double_t *a) {
 	tT2U3	= tT2*tU3/(tU3-tT2);
 	tU2U3	= tU2*tU3/(tU3-tU2);
 // Amplitudes -- Ti -- factor of 0.001 is to put a[ri] from ions/sec to ions/ms
-	ampT1		= 0.001 * a[r1] * tCap * a[p];
-	ampT2		= 0.001 * a[r2] * tCap * a[p];
-	ampT3		= 0.001 * a[r3] * tCap * a[p];
+	ampT1		= 0.001 * a[r1] * tCap * a[p] / rateScale;
+	ampT2		= 0.001 * a[r2] * tCap * a[p] / rateScale;
+	ampT3		= 0.001 * a[r3] * tCap * a[p] / rateScale;
 // Amplitudes -- Vi
 	ampV1		= 0.001 * a[r1] * tCap * (1-a[p]);
 	ampV2		= 0.001 * a[r2] * tCap * (1-a[p]);

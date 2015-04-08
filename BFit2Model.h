@@ -177,14 +177,16 @@ namespace BFitNamespace {
 	//BFitCase_t	stBFitCases[FILE_ROWS_BFit];
 	//extern Int_t		iBDNCaseIndex, iBFitCaseIndex; // global index to identify case
 	//extern Int_t		iNumStructs_BDN, iNumStructs_BFit;
+	
+	extern Double_t	rateScale; // scale down rates to help Hessian matrix inversion
 	// These never change during fitting and are set in BFit()
-	extern Int_t		nPars; // number of model parameters
+	extern Int_t	nPars; // number of model parameters
 	extern Double_t	iota; // tiny number for avoiding divide-by-0
 	extern Double_t	tCap, tBac, tCyc; // cycle times
 	extern Double_t	t1, t2, t3; // radioactive half-lives
 	//extern Double_t	tZeroArg[1], tCycArg[1]; // specifc time values 1-element array for passing by reference
-	extern Int_t		nCycles; // number of cycles in dataset -- don't confuse with parameter indec nCyc
-	extern Int_t		nCapMax; // number of injections per cycle
+	extern Int_t	nCycles; // number of cycles in dataset -- don't confuse with parameter indec nCyc
+	extern Int_t	nCapMax; // number of injections per cycle
 	extern bool		b134sbFlag; // flag for 134sb cases which get special treatment
 	// These change only when the parameters change during fitting and are set in yAll()
 	extern Int_t 		nParChanges; // counts # of times pars have changed

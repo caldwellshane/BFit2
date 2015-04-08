@@ -166,7 +166,7 @@ namespace BFitNamespace {
 	Double_t oU1 (Double_t*, Double_t*);
 	Double_t oU2 (Double_t*, Double_t*);
 	Double_t oU3 (Double_t*, Double_t*);
-
+	
 /////////////////////////////////////////////////////////////////////////////
 // Global variables
 /////////////////////////////////////////////////////////////////////////////
@@ -177,6 +177,8 @@ namespace BFitNamespace {
 	//BFitCase_t	stBFitCases[FILE_ROWS_BFit];
 	//extern Int_t		iBDNCaseIndex, iBFitCaseIndex; // global index to identify case
 	//extern Int_t		iNumStructs_BDN, iNumStructs_BFit;
+	
+	extern Double_t		rateScale; // scale down rates to help Hessian matrix inversion
 	// These never change during fitting and are set in BFit()
 	extern Int_t		nPars; // number of model parameters
 	extern Double_t	iota; // tiny number for avoiding divide-by-0

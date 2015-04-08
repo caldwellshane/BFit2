@@ -193,25 +193,25 @@ void BFitNamespace::ComputeParameterDependentVars (Double_t *a) {
 	tT2U3	= tT2*tU3/(tU3-tT2);
 	tU2U3	= tU2*tU3/(tU3-tU2);
 // Amplitudes -- Ti -- factor of 0.001 is to put a[ri] from ions/sec to ions/ms
-	ampT1		= 0.001 * a[r1] * tCap * a[p];
-	ampT2		= 0.001 * a[r2] * tCap * a[p];
-	ampT3		= 0.001 * a[r3] * tCap * a[p];
+	ampT1		= 0.001 * a[r1] * tCap * a[p] / rateScale;
+	ampT2		= 0.001 * a[r2] * tCap * a[p] / rateScale;
+	ampT3		= 0.001 * a[r3] * tCap * a[p] / rateScale;
 // Amplitudes -- Vi
-	ampV1		= 0.001 * a[r1] * tCap * (1-a[p]);
-	ampV2		= 0.001 * a[r2] * tCap * (1-a[p]);
-	ampV3		= 0.001 * a[r3] * tCap * (1-a[p]);
+	ampV1		= 0.001 * a[r1] * tCap * (1-a[p]) / rateScale;
+	ampV2		= 0.001 * a[r2] * tCap * (1-a[p]) / rateScale;
+	ampV3		= 0.001 * a[r3] * tCap * (1-a[p]) / rateScale;
 // Amplitudes -- Wi
-	ampW1		= 0.001 * a[r1] * tCap * a[p] * (1-a[rho]);
-	ampW2		= 0.001 * a[r2] * tCap * a[p] * (1-a[rho]);
-	ampW3		= 0.001 * a[r3] * tCap * a[p] * (1-a[rho]);
+	ampW1		= 0.001 * a[r1] * tCap * a[p] * (1-a[rho]) / rateScale;
+	ampW2		= 0.001 * a[r2] * tCap * a[p] * (1-a[rho]) / rateScale;
+	ampW3		= 0.001 * a[r3] * tCap * a[p] * (1-a[rho]) / rateScale;
 // Amplitudes -- Zi
-	ampZ1		= 0.001 * a[r1] * tCap * a[p] * a[gammaT1]/(a[gammaT1]-a[gammaU1]);//(a[gammaT1]+iota)/((a[gammaT1]-a[gammaU1])+iota);
-	ampZ2		= 0.001 * a[r2] * tCap * a[p] * a[gammaT2]/(a[gammaT2]-a[gammaU2]);
-	ampZ3		= 0.001 * a[r3] * tCap * a[p] * a[gammaT3]/(a[gammaT3]-a[gammaU3]);
+	ampZ1		= 0.001 * a[r1] * tCap * a[p] * a[gammaT1]/(a[gammaT1]-a[gammaU1]) / rateScale;//(a[gammaT1]+iota)/((a[gammaT1]-a[gammaU1])+iota);
+	ampZ2		= 0.001 * a[r2] * tCap * a[p] * a[gammaT2]/(a[gammaT2]-a[gammaU2]) / rateScale;
+	ampZ3		= 0.001 * a[r3] * tCap * a[p] * a[gammaT3]/(a[gammaT3]-a[gammaU3]) / rateScale;
 	//printf("ampZ1=%f, ampZ2=%f, ampZ3=%f\n", ampZ1, ampZ2, ampZ3);
 // Amplitudes -- Xi
-	ampX2		= 0.001 * a[r1] * tCap * a[p] * (1/t1) * (tT1*tU2/(tU2-tT1));
-	ampX3		= 0.001 * a[r2] * tCap * a[p] * (1/t2) * (tT2*tU3/(tU3-tT2));
+	ampX2		= 0.001 * a[r1] * tCap * a[p] * (1/t1) * (tT1*tU2/(tU2-tT1)) / rateScale;
+	ampX3		= 0.001 * a[r2] * tCap * a[p] * (1/t2) * (tT2*tU3/(tU3-tT2)) / rateScale;
 // Sigmas:
 // See sigmas and _cap functions
 	for (k=1; k<=nCapMax; k++) {

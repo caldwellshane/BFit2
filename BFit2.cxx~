@@ -53,6 +53,7 @@ Int_t		iNumStructs_BDN, iNumStructs_BFit;
 namespace BFitNamespace {
 char parNames[30][5] = {"nCyc", "dt", "DC", "r1", "r2", "r3", "p", "rho", "epsT", "epsU", "epsV", "epsW", "epsX", "epsY", "epsZ", "gT1", "gT2", "gT3", "gU1", "gU2", "gU3"};
 
+Double_t	rateScale = 0.001; // scale down rates to help Hessian matrix inversion
 // These never change during fitting and are set in BFit()
 Int_t		nPars; // number of model parameters
 Double_t	iota; // tiny number for avoiding divide-by-0
@@ -337,8 +338,19 @@ int BFit () {
 // Initialize parameter-dependent variables
 	BFitNamespace::ComputeParameterDependentVars(par);
 // Place initial par values into fitting function
-	fyAll->SetParameters(par);
-	fyAll->SetParErrors(err);
+// Reduce rate params to agree in size with others, to help Hessian matrix inversion	
+	for (index = 0; index < nPars; index++) {
+		if (index == DC || index == r1 || index == r2 || index == r3) {
+			fyAll->SetParameters(rateScale*par[index]);
+			fyAll->SetParErrors(rateScale*err[index]);
+		}
+		else {
+			fyAll->SetParameters(par[index]);
+			fyAll->SetParErrors(err[index]);
+		}
+	}
+	//fyAll->SetParameters(par);
+	//fyAll->SetParErrors(err);
 	//if (stBFitCase.pbToggle[rho]) fyAll->SetParLimits(rho,0,1);
 	//fyAll->SetParLimits(gammaT1,-0.2,0.2);
 	//fyAll->SetParLimits(r2,-100,1e4);
@@ -670,7 +682,7 @@ int BFit () {
 //	printf("\nY Range is %f to %f\n\n",yMin,yMax);
 	yRange = yMax - yMin;
 	yMin = yMin - 0.05*yRange;
-	yMax = yMax + 0.25*yRange;
+	yMax = yMax + 0.30*yRange;
 //	yMin = 0.0;
 //	yMax = 14000.0;
 	//printf("Range = (%f,%f)\n", yMin, yMax);
