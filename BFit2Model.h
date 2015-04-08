@@ -8,6 +8,8 @@
 
 namespace BFitNamespace {
 	
+	// NB: these words are array indices, ie. integers!
+	// *** If you put p instead of a[p] you will get the integer 6, not the trapping efficiency!
 	enum ParIndex { nCyc, dt, DC, r1, r2, r3, p, rho, epsT, epsU, epsV, epsW, epsX, epsY, epsZ, gammaT1, gammaT2, gammaT3, gammaU1, gammaU2, gammaU3 };
 	// a[dt]	= bin width in ms
 	// a[DC]	= DC detection rate in cycles/ms
@@ -30,7 +32,6 @@ namespace BFitNamespace {
 	// a[gammaU1]	= Non-radioactive decay rate of untrapped species 1 population (U1) (1/s)
 	// a[gammaU2]	= Non-radioactive decay rate of untrapped species 2 population (U2) (1/s)
 	// a[gammaU3]	= Non-radioactive decay rate of untrapped species 3 population (U3) (1/s)
-	// NB: the words are array indices, ie. numbers! If you put p instead of a[p] you will get 
 	
 // Function used to detect when the fitter changes the parameters
 	bool CompareParArrays (const Double_t*, const Double_t*, size_t n, Double_t eps);

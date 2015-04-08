@@ -2,7 +2,7 @@
 
 bash transposeMetadata # make sure the metadata files are up to date
 
-SAVE=1
+SAVE=0
 
 #BDN="135sb08"
 #BFIT="135sb08"
@@ -21,7 +21,7 @@ BDN="137i07"
 #BFIT="137i07_4"
 #BFIT="137i07_5"
 #BFIT="137i07_6"
-BFIT="137i07_7"
+#BFIT="137i07_7"
 #BFIT="137i07_8"
 #BFIT="137i07_9"
 #BFIT="137i07_10"
@@ -37,6 +37,8 @@ BFIT="137i07_7"
 #BFIT="137i07_20"
 #BFIT="137i07_21"
 #BFIT="137i07_22"
+#BFIT="137i07_23"
+BFIT="137i07_24"
 #BFIT="137i07Br_0"
 #BFIT="137i07Br_1"
 #BFIT="137i07BR_0"

@@ -321,6 +321,12 @@ int BFit () {
 	err = stBFitCase.pdStep;
 	Int_t index;
 	par[nCyc] = nCycles;
+	for (index = 0; index < nPars; index++) {
+		if (index == DC || index == r1 || index == r2 || index == r3) {
+			par[index] *= rateScale;
+			err[index] *= rateScale;
+		}
+	}
 // Special cases -- modifications to parameters -- catch right after param import
 	if (!strcmp(stBDNCases[iBDNCaseIndex].pcsCaseCode,"134sb01") ||
 		!strcmp(stBDNCases[iBDNCaseIndex].pcsCaseCode,"134sb02") ||
@@ -339,18 +345,18 @@ int BFit () {
 	BFitNamespace::ComputeParameterDependentVars(par);
 // Place initial par values into fitting function
 // Reduce rate params to agree in size with others, to help Hessian matrix inversion	
-	for (index = 0; index < nPars; index++) {
-		if (index == DC || index == r1 || index == r2 || index == r3) {
-			fyAll->SetParameters(rateScale*par[index]);
-			fyAll->SetParErrors(rateScale*err[index]);
-		}
-		else {
-			fyAll->SetParameters(par[index]);
-			fyAll->SetParErrors(err[index]);
-		}
-	}
-	//fyAll->SetParameters(par);
-	//fyAll->SetParErrors(err);
+	//for (index = 0; index < nPars; index++) {
+	//	if (index == DC || index == r1 || index == r2 || index == r3) {
+	//		fyAll->SetParameter(index,rateScale*par[index]);
+	//		fyAll->SetParError(index,rateScale*err[index]);
+	//	}
+	//	else {
+	//		fyAll->SetParameter(index,par[index]);
+	//		fyAll->SetParError(index,err[index]);
+	//	}
+	//}
+	fyAll->SetParameters(par);
+	fyAll->SetParErrors(err);
 	//if (stBFitCase.pbToggle[rho]) fyAll->SetParLimits(rho,0,1);
 	//fyAll->SetParLimits(gammaT1,-0.2,0.2);
 	//fyAll->SetParLimits(r2,-100,1e4);

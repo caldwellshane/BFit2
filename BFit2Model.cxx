@@ -296,7 +296,7 @@ void BFitNamespace::ComputeParameterDependentVars (Double_t *a) {
 // Instantaneous detection rate
 //////////////////////////////////////////////////////////////////////////
 Double_t BFitNamespace::rDC (Double_t *t, Double_t *a) {
-	return a[nCyc]*a[DC]*0.001; // 1/sec to 1/ms
+	return a[nCyc]*a[DC]*0.001 / rateScale; // 1/sec to 1/ms, and rateScale
 }
 Double_t BFitNamespace::rT1 (Double_t *t, Double_t *a) {
 	using namespace BFitNamespace;
