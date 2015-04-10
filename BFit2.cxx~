@@ -29,6 +29,7 @@
 #include "TLegend.h"
 #include "TPaveStats.h"
 #include "Fit/FitConfig.h"
+#include "TVirtualFitter.h"
 //#include "include/bdn.h"
 //#include "include/sb135.h"
 //#include "bdn_cases.h"
@@ -321,11 +322,25 @@ int BFit () {
 	err = stBFitCase.pdStep;
 	Int_t index;
 	par[nCyc] = nCycles;
+	// Avoid removable discontinuity in Z pops from gammaTi==gammaUi
+	par[gammaU1] += 2*iota;
+	par[gammaU2] += 2*iota;
+	par[gammaU3] += 2*iota;
+	// Parameter transformations to help fitting
 	for (index = 0; index < nPars; index++) {
-		if (index == DC || index == r1 || index == r2 || index == r3) {
+		//if (index == DC || index == r1 || index == r2 || index == r3) {
+		if (index == r1 || index == r2 || index == r3) { // removed DC ... doesn't seem to work
 			par[index] *= rateScale;
 			err[index] *= rateScale;
 		}
+		if (index == epsV || index == epsW || index == epsX || index == epsY || index == epsZ)
+			par[index] = 1.0 - par[index];
+	// Not working yet...
+	//	if (index == gammaT1 || index == gammaT2 || index == gammaT3 || index == gammaU1 || index == gammaU2 || index == gammaU3) {
+	//	//	par[index] = 100.0 * par[index];
+	//	//	par[index] = 1.0 - par[index];
+	//		par[index] = 1.0 + Log(1.0+par[index]);
+	//	}
 	}
 // Special cases -- modifications to parameters -- catch right after param import
 	if (!strcmp(stBDNCases[iBDNCaseIndex].pcsCaseCode,"134sb01") ||
@@ -427,14 +442,18 @@ int BFit () {
 	//	fyAll->SetParLimits(epsZ,0,1);
 	// Do fit and get results
 		timer = clock();
-	//	TVirtualFitter::SetDefaultFitter("Minuit2");
+		
 	//	TVirtualFitter *fitter;
+	//	TVirtualFitter::SetDefaultFitter("Fumili");
+	//	ROOT::Math::MinimizerOptions::SetDefaultMinimizer("GSLMultiMin","BFGS");
 	//	
+		
 		TFitResultPtr fit = h1->Fit(fyAll,stBFitCase.pcsOptions);
 		timer = clock() - timer;
 		printf("\nFitting done in %d clicks (%f seconds).\n", timer, (Float_t)timer/CLOCKS_PER_SEC);
 		printf("Fit status = %d\n",fit->Status());
 		printf("Cov status = %d\n",fit->CovMatrixStatus());
+		printf("Fit valid? = %d\n",fit->IsValid());
 		TMatrixDSym cov = fit->GetCovarianceMatrix();
 	//	Double_t *cov2 = fit->GetCovarianceMatrix();
 	//	Int_t ii=0, jj=0;

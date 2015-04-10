@@ -158,16 +158,45 @@ void BFitNamespace::ComputeParameterDependentVars (Double_t *a) {
 // Special cases:
 	if (b134sbFlag) a[gammaT3] = a[gammaT2];
 // Offset gammaUi to avoid gammaTi == gammaUi (== 0)
-	a[gammaU1] += 2*iota;
-	a[gammaU2] += 2*iota;
-	a[gammaU3] += 2*iota;
+	//a[gammaU1] += 2*iota;
+	//a[gammaU2] += 2*iota;
+	//a[gammaU3] += 2*iota;
 // Modified lifetimes:
-	tT1 = 1.0 / ( 1.0/t1 + a[gammaT1]/1000.0 ); // net variable lifetime (1/e) in ms
-	tT2 = 1.0 / ( 1.0/t2 + a[gammaT2]/1000.0 ); // net variable lifetime (1/e) in ms
-	tT3 = 1.0 / ( 1.0/t3 + a[gammaT3]/1000.0 ); // net variable lifetime (1/e) in ms
-	tU1 = 1.0 / ( 1.0/t1 + a[gammaU1]/1000.0 ); // net variable lifetime (1/e) in ms
-	tU2 = 1.0 / ( 1.0/t2 + a[gammaU2]/1000.0 ); // net variable lifetime (1/e) in ms
-	tU3 = 1.0 / ( 1.0/t3 + a[gammaU3]/1000.0 ); // net variable lifetime (1/e) in ms
+	/* Not working yet...
+	// Un-transform gamma params
+	Double_t gT1 = Exp(a[gammaT1]-1.0)-1.0;
+	Double_t gT2 = Exp(a[gammaT2]-1.0)-1.0;
+	Double_t gT3 = Exp(a[gammaT3]-1.0)-1.0;
+	Double_t gU1 = Exp(a[gammaU1]-1.0)-1.0;
+	Double_t gU2 = Exp(a[gammaU2]-1.0)-1.0;
+	Double_t gU3 = Exp(a[gammaU3]-1.0)-1.0;
+//	Double_t gT1 = 1.0 - a[gammaT1];
+//	Double_t gT2 = 1.0 - a[gammaT2];
+//	Double_t gT3 = 1.0 - a[gammaT3];
+//	Double_t gU1 = 1.0 - a[gammaU1];
+//	Double_t gU2 = 1.0 - a[gammaU2];
+//	Double_t gU3 = 1.0 - a[gammaU3];
+//	Double_t gT1 = a[gammaT1] / 100.0;
+//	Double_t gT2 = a[gammaT2] / 100.0;
+//	Double_t gT3 = a[gammaT3] / 100.0;
+//	Double_t gU1 = a[gammaU1] / 100.0;
+//	Double_t gU2 = a[gammaU2] / 100.0;
+//	Double_t gU3 = a[gammaU3] / 100.0;
+	*/
+	// "Identity transform" ... no change to input gammas:
+	Double_t gT1 = a[gammaT1];
+	Double_t gT2 = a[gammaT2];
+	Double_t gT3 = a[gammaT3];
+	Double_t gU1 = a[gammaU1];
+	Double_t gU2 = a[gammaU2];
+	Double_t gU3 = a[gammaU3];
+//	printf("gT2 = %f\n",gT2);
+	tT1 = 1.0 / ( 1.0/t1 + gT1/1000.0);//a[gammaT1]/1000.0 ); // net variable lifetime (1/e) in ms
+	tT2 = 1.0 / ( 1.0/t2 + gT2/1000.0);//a[gammaT2]/1000.0 ); // net variable lifetime (1/e) in ms
+	tT3 = 1.0 / ( 1.0/t3 + gT3/1000.0);//a[gammaT3]/1000.0 ); // net variable lifetime (1/e) in ms
+	tU1 = 1.0 / ( 1.0/t1 + gU1/1000.0);//a[gammaU1]/1000.0 ); // net variable lifetime (1/e) in ms
+	tU2 = 1.0 / ( 1.0/t2 + gU2/1000.0);//a[gammaU2]/1000.0 ); // net variable lifetime (1/e) in ms
+	tU3 = 1.0 / ( 1.0/t3 + gU3/1000.0);//a[gammaU3]/1000.0 ); // net variable lifetime (1/e) in ms
 	if (tT1==tU1 || tT2==tU2 || tT3==tU3) { // this probably won't be needed, since I put the 1000*iota offset in tUi
 	// In the future I hope you won't need the variable lifetimes!
 		printf("\n************************************************************");
@@ -177,7 +206,7 @@ void BFitNamespace::ComputeParameterDependentVars (Double_t *a) {
 		printf("\n*** Suggestion: Slightly change either gamma_Ti or gamma_Ui.");
 		printf("\n************************************************************\n\n");
 	}
-	//printf("tT1=%f, tT2=%f, tT3=%f\ntU1=%f, tU2=%f, tU3=%f\n", tT1, tT2, tT3, tU1, tU2, tU3);
+//	printf("tT1=%f, tT2=%f, tT3=%f\ntU1=%f, tU2=%f, tU3=%f\n", tT1, tT2, tT3, tU1, tU2, tU3);
 // Decay factors
 	aT1 = Exp(-tCap/tT1);
 	aT2 = Exp(-tCap/tT2);
@@ -205,9 +234,9 @@ void BFitNamespace::ComputeParameterDependentVars (Double_t *a) {
 	ampW2		= 0.001 * a[r2] * tCap * a[p] * (1-a[rho]) / rateScale;
 	ampW3		= 0.001 * a[r3] * tCap * a[p] * (1-a[rho]) / rateScale;
 // Amplitudes -- Zi
-	ampZ1		= 0.001 * a[r1] * tCap * a[p] * a[gammaT1]/(a[gammaT1]-a[gammaU1]) / rateScale;//(a[gammaT1]+iota)/((a[gammaT1]-a[gammaU1])+iota);
-	ampZ2		= 0.001 * a[r2] * tCap * a[p] * a[gammaT2]/(a[gammaT2]-a[gammaU2]) / rateScale;
-	ampZ3		= 0.001 * a[r3] * tCap * a[p] * a[gammaT3]/(a[gammaT3]-a[gammaU3]) / rateScale;
+	ampZ1		= 0.001 * a[r1] * tCap * a[p] * gT1/(gT1-gU1) / rateScale;//a[gammaT1]/(a[gammaT1]-a[gammaU1]) / rateScale;//(a[gammaT1]+iota)/((a[gammaT1]-a[gammaU1])+iota);
+	ampZ2		= 0.001 * a[r2] * tCap * a[p] * gT2/(gT2-gU2) / rateScale;//a[gammaT2]/(a[gammaT2]-a[gammaU2]) / rateScale;
+	ampZ3		= 0.001 * a[r3] * tCap * a[p] * gT3/(gT3-gU3) / rateScale;//a[gammaT3]/(a[gammaT3]-a[gammaU3]) / rateScale;
 	//printf("ampZ1=%f, ampZ2=%f, ampZ3=%f\n", ampZ1, ampZ2, ampZ3);
 // Amplitudes -- Xi
 	ampX2		= 0.001 * a[r1] * tCap * a[p] * (1/t1) * (tT1*tU2/(tU2-tT1)) / rateScale;
@@ -292,11 +321,124 @@ void BFitNamespace::ComputeParameterDependentVars (Double_t *a) {
 }
 
 //////////////////////////////////////////////////////////////////////////
+// These rates are AFTER doing eps --> 1-eps
+//////////////////////////////////////////////////////////////////////////
 // "r" functions
 // Instantaneous detection rate
 //////////////////////////////////////////////////////////////////////////
 Double_t BFitNamespace::rDC (Double_t *t, Double_t *a) {
-	return a[nCyc]*a[DC]*0.001 / rateScale; // 1/sec to 1/ms, and rateScale
+	return a[nCyc]*a[DC]*0.001;// / rateScale; // 1/sec to 1/ms, [no:] and rateScale
+}
+Double_t BFitNamespace::rT1 (Double_t *t, Double_t *a) {
+	using namespace BFitNamespace;
+	//extern Double_t t1;
+	return a[nCyc]*(1.0-a[epsT])*Ttot(1,a,t[0])/t1;
+}
+Double_t BFitNamespace::rT2 (Double_t *t, Double_t *a) {
+	using namespace BFitNamespace;
+	//extern Double_t t2;
+	return a[nCyc]*(1.0-a[epsT])*Ttot(2,a,t[0])/t2;
+}
+Double_t BFitNamespace::rT3 (Double_t *t, Double_t *a) {
+	using namespace BFitNamespace;
+	//extern Double_t t3;
+	return a[nCyc]*(1.0-a[epsT])*Ttot(3,a,t[0])/t3;
+}
+Double_t BFitNamespace::rU1 (Double_t *t, Double_t *a) {
+	using namespace BFitNamespace;
+	//extern Double_t t1;
+	return rV1(t,a) + rW1(t,a) + rZ1(t,a);
+	//a[nCyc]*a[epsU]*((1.0-a[epsV])*Vtot(1,a,t[0]) + (1.0-a[epsW])*Wtot(1,a,t[0]) + (1.0-a[epsZ])*Ztot(1,a,t[0]))/t1;
+}
+Double_t BFitNamespace::rU2 (Double_t *t, Double_t *a) {
+	using namespace BFitNamespace;
+	//extern Double_t t2;
+	return rV2(t,a) + rW2(t,a) + rZ2(t,a) + rX2(t,a) + rY2(t,a);
+	//a[nCyc]*a[epsU]*((1.0-a[epsV])*Vtot(2,a,t[0]) + (1.0-a[epsW])*Wtot(2,a,t[0]) + (1.0-a[epsZ])*Ztot(2,a,t[0]) + (1.0-a[epsX])*Xtot(2,a,t[0]) + (1.0-a[epsY])*Ytot(2,a,t[0]))/t2;
+}
+Double_t BFitNamespace::rU3 (Double_t *t, Double_t *a) {
+	using namespace BFitNamespace;
+	//extern Double_t t3;
+	return rV3(t,a) + rW3(t,a) + rZ3(t,a) + rX3(t,a) + rY3(t,a);
+	//a[nCyc]*a[epsU]*((1.0-a[epsV])*Vtot(3,a,t[0]) + (1.0-a[epsW])*Wtot(3,a,t[0]) + (1.0-a[epsZ])*Ztot(3,a,t[0]) + (1.0-a[epsX])*Xtot(3,a,t[0]) + (1.0-a[epsY])*Ytot(3,a,t[0]))/t3;
+}
+Double_t BFitNamespace::rV1 (Double_t *t, Double_t *a) {
+	using namespace BFitNamespace;
+	//extern Double_t t1;
+	return a[nCyc]*a[epsU]*(1.0-a[epsV])*Vtot(1,a,t[0])/t1;
+}
+Double_t BFitNamespace::rV2 (Double_t *t, Double_t *a) {
+	using namespace BFitNamespace;
+	//extern Double_t t2;
+	return a[nCyc]*a[epsU]*(1.0-a[epsV])*Vtot(2,a,t[0])/t2;
+}
+Double_t BFitNamespace::rV3 (Double_t *t, Double_t *a) {
+	using namespace BFitNamespace;
+	//extern Double_t t3;
+	return a[nCyc]*a[epsU]*(1.0-a[epsV])*Vtot(3,a,t[0])/t3;
+}
+Double_t BFitNamespace::rW1 (Double_t *t, Double_t *a) {
+	using namespace BFitNamespace;
+	//extern Double_t t1;
+	return a[nCyc]*a[epsU]*(1.0-a[epsW])*Wtot(1,a,t[0])/t1;
+}
+Double_t BFitNamespace::rW2 (Double_t *t, Double_t *a) {
+	using namespace BFitNamespace;
+	//extern Double_t t2;
+	return a[nCyc]*a[epsU]*(1.0-a[epsW])*Wtot(2,a,t[0])/t2;
+}
+Double_t BFitNamespace::rW3 (Double_t *t, Double_t *a) {
+	using namespace BFitNamespace;
+	//extern Double_t t3;
+	return a[nCyc]*a[epsU]*(1.0-a[epsW])*Wtot(3,a,t[0])/t3;
+}
+Double_t BFitNamespace::rZ1 (Double_t *t, Double_t *a) {
+	using namespace BFitNamespace;
+	//extern Double_t t1;
+	return a[nCyc]*a[epsU]*(1.0-a[epsZ])*Ztot(1,a,t[0])/t1;
+}
+Double_t BFitNamespace::rZ2 (Double_t *t, Double_t *a) {
+	using namespace BFitNamespace;
+	//extern Double_t t2;
+	return a[nCyc]*a[epsU]*(1.0-a[epsZ])*Ztot(2,a,t[0])/t2;
+}
+Double_t BFitNamespace::rZ3 (Double_t *t, Double_t *a) {
+	using namespace BFitNamespace;
+	//extern Double_t t3;
+	return a[nCyc]*a[epsU]*(1.0-a[epsZ])*Ztot(3,a,t[0])/t3;
+}
+Double_t BFitNamespace::rX2 (Double_t *t, Double_t *a) {
+	using namespace BFitNamespace;
+	//extern Double_t t2;
+	return a[nCyc]*a[epsU]*(1.0-a[epsX])*Xtot(2,a,t[0])/t2;
+}
+Double_t BFitNamespace::rX3 (Double_t *t, Double_t *a) {
+	using namespace BFitNamespace;
+	//extern Double_t t3;
+	return a[nCyc]*a[epsU]*(1.0-a[epsX])*Xtot(3,a,t[0])/t3;
+}
+Double_t BFitNamespace::rY2 (Double_t *t, Double_t *a) {
+	using namespace BFitNamespace;
+	//extern Double_t t2;
+	return a[nCyc]*a[epsU]*(1.0-a[epsY])*Ytot(2,a,t[0])/t2;
+}
+Double_t BFitNamespace::rY3 (Double_t *t, Double_t *a) {
+	using namespace BFitNamespace;
+	//extern Double_t t3;
+	return a[nCyc]*a[epsU]*(1.0-a[epsY])*Ytot(3,a,t[0])/t3;
+}
+Double_t BFitNamespace::rAll (Double_t *t, Double_t *a) {
+	using namespace BFitNamespace;
+	return rDC(t,a) + rT1(t,a) + rT2(t,a) + rT3(t,a) + rU1(t,a) + rU2(t,a) + rU3(t,a);
+}
+//////////////////////////////////////////////////////////////////////////
+/* BEFORE doing eps --> 1-eps
+//////////////////////////////////////////////////////////////////////////
+// "r" functions
+// Instantaneous detection rate
+//////////////////////////////////////////////////////////////////////////
+Double_t BFitNamespace::rDC (Double_t *t, Double_t *a) {
+	return a[nCyc]*a[DC]*0.001;// / rateScale; // 1/sec to 1/ms, [no:] and rateScale
 }
 Double_t BFitNamespace::rT1 (Double_t *t, Double_t *a) {
 	using namespace BFitNamespace;
@@ -400,7 +542,7 @@ Double_t BFitNamespace::rAll (Double_t *t, Double_t *a) {
 	using namespace BFitNamespace;
 	return rDC(t,a) + rT1(t,a) + rT2(t,a) + rT3(t,a) + rU1(t,a) + rU2(t,a) + rU3(t,a);
 }
-
+*/
 //////////////////////////////////////////////////////////////////////////
 // "y" functions
 // Functions to plot: (obs. decay rate)x(bin dt) = counts by bin = y
