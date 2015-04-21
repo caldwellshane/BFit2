@@ -1,0 +1,61 @@
+Timestamp = Thu Apr 16 14:34:48 2015
+
+Importing metadata from CSV files...
+Imported 68 BDN cases
+Imported 105 BFit cases
+Performing BFit with BDN case 137i07 and BFit case 137i07Br_01
+
+BFit started. Timer = 0.06 sec.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BETA SINGLES MODEL
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Case: 137i07
+File: /music/bpt1/bpt/bdn/shane/137i/rootfiles/137i07.root
+Histogram: h_betas_vs_cycle_time
+Total cycle time	=    246.000 s
+Background time		=    101.000 s
+Capture cycle time	=      6.000 s
+Last capture time	=      1.000 s
+137-Te halflife		=      2.490 s  (lifetime      3.592 s)
+137-I halflife		=     24.500 s  (lifetime     35.346 s)
+137-Xe halflife		=    229.080 s  (lifetime    330.493 s)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HISTOGRAM REBINNED
+   Number of hist bins = 984
+   Number of fn points = 246000
+   Number of pts/bin   = 250
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Not fitting! Drawing functions using parameter seed values.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+PARAMETER SEED VALUES
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      Par name  Varying?	Par init val and step
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       # Cyc's         0	525 +/- 0.01
+     Bin width         0	250 +/- 0.01
+       DC rate         1	0.007 +/- 0.001
+        Rate 1         1	1e-05 +/- 5e-07
+        Rate 2         1	0.00078 +/- 5e-07
+        Rate 3         0	0 +/- 5e-07
+      Capt eff         0	0.6 +/- 0.02
+      Capt ret         0	1 +/- 0.01
+         T eff         0	0.99 +/- 0.01
+         U eff         0	1 +/- 0.001
+         V eff         1	0.998 +/- 0.0001
+         W eff         0	0 +/- 0.001
+         X eff         0	1 +/- 0.001
+         Y eff         0	1 +/- 0.001
+         Z eff         1	0.998 +/- 0.0001
+       T1 loss         0	0.0286 +/- 0.005
+       T2 loss         0	0.0286 +/- 0.001
+       T3 loss         0	0 +/- 0.005
+       U1 loss         0	2e-10 +/- 0.005
+       U2 loss         0	2e-10 +/- 0.005
+       U3 loss         0	10000 +/- 0.01
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+BFit2 done. Timer = 2.44 sec.
+Elapsed time = 2.38 sec.
+

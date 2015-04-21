@@ -38,7 +38,7 @@ Double_t BFitNamespace::Ttot (Int_t i, Double_t *a, Double_t tvar) {
 	static Int_t n;
 	f = 0.0;
 	n = Ceil((tvar-tBac)/tCap);
-	if (tvar==tBac) n=1;
+	//if (tvar==tBac) n=1;
 	if (tBac <= tvar && tvar <= tCyc) {
 		if (i==1) f = ampT1 * sigmaT1[n] * Exp(-(tvar-tBac-(n-1)*tCap)/tT1);
 		if (i==2) f = ampT2 * sigmaT2[n] * Exp(-(tvar-tBac-(n-1)*tCap)/tT2);

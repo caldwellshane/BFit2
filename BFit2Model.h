@@ -189,6 +189,7 @@ namespace BFitNamespace {
 	extern Int_t	nCycles; // number of cycles in dataset -- don't confuse with parameter indec nCyc
 	extern Int_t	nCapMax; // number of injections per cycle
 	extern bool		b134sbFlag; // flag for 134sb cases which get special treatment
+	extern bool		bEpsXEqualsEpsYFlag; // flag for forcing epsX := epsY
 	// These change only when the parameters change during fitting and are set in yAll()
 	extern Int_t 		nParChanges; // counts # of times pars have changed
 	extern Double_t	*lastPar; // holds most recent paramter values for comparison
@@ -262,5 +263,12 @@ static Double_t DC_integral_error = 0.0;
 static Double_t All_integral_error = 0.0;
 
 static Double_t Integral_sum_error = 0.0;
+
+static Double_t U1_integral_trap_empty_error = 0.0;
+static Double_t U2_integral_trap_empty_error = 0.0;
+static Double_t U3_integral_trap_empty_error = 0.0;
+static Double_t U1_integral_trap_full_error  = 0.0;
+static Double_t U2_integral_trap_full_error  = 0.0;
+static Double_t U3_integral_trap_full_error  = 0.0;
 
 #endif

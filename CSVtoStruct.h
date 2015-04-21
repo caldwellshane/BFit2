@@ -34,7 +34,7 @@
 //#define DEBUG
 #define STRING_SIZE     4096
 #define FILE_ROWS_BDN     68 // number of structs in stBDNCases
-#define FILE_ROWS_BFit    48 // number of structs in stBFitCases
+#define FILE_ROWS_BFit   243 // number of structs in stBFitCases
 
 struct BDNCase_t
 {
@@ -150,6 +150,7 @@ struct BFitCase_t
 	char bHasDDC;
 	char bHasVWXY;
 	char bComputeOtherIntegrals;
+	char bEpsXEqualsEpsY;
 };
 
 //Public function prototypes

@@ -779,6 +779,10 @@ int ParseToStruct_BFit (char *pcsLine, BFitCase_t *pstStruct) // change per stru
 	// computeOtherIntegrals
 	pcsResult = strtok(NULL,",");
 	pstStruct->bComputeOtherIntegrals = atoi(pcsResult);
+	
+	// computeOtherIntegrals
+	pcsResult = strtok(NULL,",");
+	pstStruct->bEpsXEqualsEpsY = atoi(pcsResult);
 
 #ifdef DEBUG
 	printf("Options = %s\nDoFit = %i\nMonteCarlo = %i\nHasDDC = %i\nHasVWXY = %i\nComputeOtherIntegrals = %i\n", 

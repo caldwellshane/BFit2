@@ -64,6 +64,7 @@ Double_t	t1, t2, t3; // radioactive half-lives
 Int_t		nCycles; // number of cycles in dataset -- don't confuse with parameter indec nCyc
 Int_t		nCapMax; // number of injections per cycle
 bool		b134sbFlag = 0; // flag for 134sb cases which get special treatment
+bool		bEpsXEqualsEpsYFlag = 0; // flag for forcing epsX := epsY
 // These change only when the parameters change during fitting and are set in yAll()
 Int_t 		nParChanges; // counts # of times pars have changed
 Double_t	*lastPar; // holds most recent paramter values for comparison
@@ -266,6 +267,7 @@ int BFit () {
 //**************************************************************************
 // This one fits the data:
 	TF1 *fyAll	= new TF1("fyAll",yAll, 0.0, tCyc, nPars);
+	//TF1 *fyAll	= new TF1("fyAll",yAll, 30100.0, 36000.0, nPars);
 //**************************************************************************
 // Beta rates to be used by TF1::Integral() and TF1::IntegralError()
 	TF1 *frDC	= new TF1("frDC", rDC, 0.0, tCyc, nPars);
@@ -333,7 +335,7 @@ int BFit () {
 			par[index] *= rateScale;
 			err[index] *= rateScale;
 		}
-		if (index == epsV || index == epsW || index == epsX || index == epsY || index == epsZ)
+		if (index == epsT || index == epsV || index == epsW || index == epsX || index == epsY || index == epsZ)
 			par[index] = 1.0 - par[index];
 	// Not working yet... No transform on gammas
 	//	if (index == gammaT1 || index == gammaT2 || index == gammaT3 || index == gammaU1 || index == gammaU2 || index == gammaU3) {
@@ -343,6 +345,12 @@ int BFit () {
 	//	}
 	}
 // Special cases -- modifications to parameters -- catch right after param import
+	if (stBFitCase.bEpsXEqualsEpsY)
+	{
+		bEpsXEqualsEpsYFlag = 1;
+		par[epsX] = par[epsY];
+		tog[epsX] = 0;
+	}
 	if (!strcmp(stBDNCases[iBDNCaseIndex].pcsCaseCode,"134sb01") ||
 		!strcmp(stBDNCases[iBDNCaseIndex].pcsCaseCode,"134sb02") ||
 		!strcmp(stBDNCases[iBDNCaseIndex].pcsCaseCode,"134sb03") ||
@@ -395,6 +403,7 @@ int BFit () {
 //		cout << "134-Sb data detected. Forcing gammaT3 = gammaT2. YOU SHOULD GUARANTEE THAT X3 = Y3 = 0. You can set epsX = epsY = 0." << endl << endl;
 //	}
 	if (b134sbFlag) cout << "134-Sb data detected. Forcing gammaT3 = gammaT2. YOU SHOULD GUARANTEE THAT X3 = Y3 = 0. You can set epsX = epsY = 0." << endl << endl;
+	if (bEpsXEqualsEpsYFlag) cout << "You have specified the epsX should be forced to equal epsY. Program has dictated that epsX will not be varied by the fitter." << endl << endl;
 	else cout << endl;
 // Initialize all functions to parameter seed values
 	fyDC	-> SetParameters(par);
@@ -427,7 +436,7 @@ int BFit () {
 		if (b134sbFlag && tog[gammaT2]==0) fyAll->FixParameter(gammaT3, stBFitCase.pdSeed[gammaT2]);
 	// Print initial parameters: (see similar code in yAll() in BFit2Model.cxx)
 		if (nParChanges == 0) {
-			printf("Ini pars (   0): ",nParChanges);
+			printf("Ini pars (   0): ");
 			for (index = 0; index < nPars; index++) {
 				if (stBFitCases[iBFitCaseIndex].pbToggle[index]) printf("%s=%.4e ",parNames[index],par[index]);
 			}
@@ -575,6 +584,12 @@ int BFit () {
 			U3_integral_error = intErr( frU3, covArray, 0.0, tCyc );
 			DC_integral_error = intErr( frDC, covArray, 0.0, tCyc );
 			All_integral_error = intErr( frAll, covArray, 0.0, tCyc );
+			U1_integral_trap_empty_error = intErr( frU1, covArray, 0.0, tBac );
+			U2_integral_trap_empty_error = intErr( frU2, covArray, 0.0, tBac );
+			U3_integral_trap_empty_error = intErr( frU3, covArray, 0.0, tBac );
+			U1_integral_trap_full_error  = intErr( frU1, covArray, tBac, tCyc );
+			U2_integral_trap_full_error  = intErr( frU2, covArray, tBac, tCyc );
+			U3_integral_trap_full_error  = intErr( frU3, covArray, tBac, tCyc );
 		}
 		else {
 			T1_integral_error = frT1->IntegralError( 0.0, tCyc, par, cov.GetMatrixArray() );
@@ -584,6 +599,12 @@ int BFit () {
 			U2_integral_error = frU2->IntegralError( 0.0, tCyc, par, cov.GetMatrixArray() );
 			U3_integral_error = frU3->IntegralError( 0.0, tCyc, par, cov.GetMatrixArray() );
 			All_integral_error = frAll->IntegralError( 0.0, tCyc, par, cov.GetMatrixArray() );
+			U1_integral_trap_empty_error = frU1->IntegralError( 0.0, tBac, par, cov.GetMatrixArray() );
+			U2_integral_trap_empty_error = frU2->IntegralError( 0.0, tBac, par, cov.GetMatrixArray() );
+			U3_integral_trap_empty_error = frU3->IntegralError( 0.0, tBac, par, cov.GetMatrixArray() );
+			U1_integral_trap_full_error  = frU1->IntegralError( tBac, tCyc, par, cov.GetMatrixArray() );
+			U2_integral_trap_full_error  = frU2->IntegralError( tBac, tCyc, par, cov.GetMatrixArray() );
+			U3_integral_trap_full_error  = frU3->IntegralError( tBac, tCyc, par, cov.GetMatrixArray() );
 		}
 //		T3_integral_error = frT3->IntegralError( 0.0, tCyc, par, cov.GetMatrixArray() );
 //		U1_integral_error = frU1->IntegralError( 0.0, tCyc, par, cov.GetMatrixArray() );
@@ -622,9 +643,12 @@ int BFit () {
 		printf("All integral = %.1f +/- %.1f\n", All_integral, All_integral_error);
 		if (stBFitCase.bComputeOtherIntegrals) {
 			cout << separator << endl;
-			printf("U1 with trap emtpy = %.1f; trap full = %.1f\n", U1_integral_trap_empty, U1_integral_trap_full);
-			printf("U2 with trap emtpy = %.1f; trap full = %.1f\n", U2_integral_trap_empty, U2_integral_trap_full);
-			printf("U3 with trap emtpy = %.1f; trap full = %.1f\n", U3_integral_trap_empty, U3_integral_trap_full);
+			printf("U1 with trap emtpy = %.1f +/- %.1f\n", U1_integral_trap_empty, U1_integral_trap_empty_error );
+			printf("U2 with trap emtpy = %.1f +/- %.1f\n", U2_integral_trap_empty, U2_integral_trap_empty_error );
+			printf("U3 with trap emtpy = %.1f +/- %.1f\n", U3_integral_trap_empty, U3_integral_trap_empty_error );
+			printf("U1 with trap full  = %.1f +/- %.1f\n", U1_integral_trap_full, U1_integral_trap_full_error );
+			printf("U2 with trap full  = %.1f +/- %.1f\n", U2_integral_trap_full, U2_integral_trap_full_error );
+			printf("U3 with trap full  = %.1f +/- %.1f\n", U3_integral_trap_full, U3_integral_trap_full_error );
 //			printf("All untrapped with trap empty = %f (bin %f to bin %f)\n", h1->Integral(binZero, binCap-1) - 0.001*par[DC]*tBac, binZero, binCap);
 //			printf("All data area in histogram = %f\n", h1->Integral(binZero, binCycle-1));
 //			printf("All data area in histogram = %f\n", h1->Integral());
@@ -645,7 +669,7 @@ int BFit () {
 	foU2->SetLineColor(kBlue);
 	foU3->SetLineColor(kRed);
 	h1->SetLineColor(16);
-//	h2->SetLineColor(16);
+	h2->SetLineColor(16);
 	
 	fyDC->SetLineStyle(2);
 	foU1->SetLineStyle(2);
@@ -698,6 +722,7 @@ int BFit () {
 	foU2->Draw("SAME");
 	foT2->Draw("SAME");
 	fyDC->Draw("SAME");
+	h2->Draw("HISTSAME");
 	//c_B_fit->Update();
 	
 	//Double_t xMin = h1->GetXaxis()->GetXmin();

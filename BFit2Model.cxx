@@ -157,32 +157,52 @@ void BFitNamespace::ComputeParameterDependentVars (Double_t *a) {
 	
 // Special cases:
 	if (b134sbFlag) a[gammaT3] = a[gammaT2];
+	if (bEpsXEqualsEpsYFlag) a[epsX] = a[epsY];
+	
 // Offset gammaUi to avoid gammaTi == gammaUi (== 0)
 	//a[gammaU1] += 2*iota;
 	//a[gammaU2] += 2*iota;
 	//a[gammaU3] += 2*iota;
+
 // Modified lifetimes:
-	/* Not working yet...
+	// Not working yet...
 	// Un-transform gamma params
-	Double_t gT1 = Exp(a[gammaT1]-1.0)-1.0;
-	Double_t gT2 = Exp(a[gammaT2]-1.0)-1.0;
-	Double_t gT3 = Exp(a[gammaT3]-1.0)-1.0;
-	Double_t gU1 = Exp(a[gammaU1]-1.0)-1.0;
-	Double_t gU2 = Exp(a[gammaU2]-1.0)-1.0;
-	Double_t gU3 = Exp(a[gammaU3]-1.0)-1.0;
+//	Double_t gT1 = Exp(a[gammaT1]-1.0)-1.0;
+//	Double_t gT2 = Exp(a[gammaT2]-1.0)-1.0;
+//	Double_t gT3 = Exp(a[gammaT3]-1.0)-1.0;
+//	Double_t gU1 = Exp(a[gammaU1]-1.0)-1.0;
+//	Double_t gU2 = Exp(a[gammaU2]-1.0)-1.0;
+//	Double_t gU3 = Exp(a[gammaU3]-1.0)-1.0;
+
 //	Double_t gT1 = 1.0 - a[gammaT1];
 //	Double_t gT2 = 1.0 - a[gammaT2];
 //	Double_t gT3 = 1.0 - a[gammaT3];
 //	Double_t gU1 = 1.0 - a[gammaU1];
 //	Double_t gU2 = 1.0 - a[gammaU2];
 //	Double_t gU3 = 1.0 - a[gammaU3];
+
 //	Double_t gT1 = a[gammaT1] / 100.0;
 //	Double_t gT2 = a[gammaT2] / 100.0;
 //	Double_t gT3 = a[gammaT3] / 100.0;
 //	Double_t gU1 = a[gammaU1] / 100.0;
 //	Double_t gU2 = a[gammaU2] / 100.0;
 //	Double_t gU3 = a[gammaU3] / 100.0;
-	*/
+
+// Try using total modified lifetime as variable...
+// Here the gammas are really the whole modeified lifetime, and the gT1, etc, are the trap loss rates
+//	Double_t gT1 = (1/a[gammaT1] - 1000.0/t1);
+//	Double_t gT2 = (1/a[gammaT2] - 1000.0/t2);
+//	Double_t gT3 = (1/a[gammaT3] - 1000.0/t3);
+//	Double_t gU1 = (1/a[gammaU1] - 1000.0/t1);
+//	Double_t gU2 = (1/a[gammaU2] - 1000.0/t2);
+//	Double_t gU3 = (1/a[gammaU3] - 1000.0/t3);
+//	tT1 = 1000.0*a[gammaT1];//a[gammaT1]/1000.0 ); // net variable lifetime (1/e) in ms
+//	tT2 = 1000.0*a[gammaT2];//a[gammaT2]/1000.0 ); // net variable lifetime (1/e) in ms
+//	tT3 = 1000.0*a[gammaT3];//a[gammaT3]/1000.0 ); // net variable lifetime (1/e) in ms
+//	tU1 = 1000.0*a[gammaU1];//a[gammaU1]/1000.0 ); // net variable lifetime (1/e) in ms
+//	tU2 = 1000.0*a[gammaU2];//a[gammaU2]/1000.0 ); // net variable lifetime (1/e) in ms
+//	tU3 = 1000.0*a[gammaU3];//a[gammaU3]/1000.0 ); // net variable lifetime (1/e) in ms
+	
 	// "Identity transform" ... no change to input gammas:
 	Double_t gT1 = a[gammaT1];
 	Double_t gT2 = a[gammaT2];
@@ -190,13 +210,13 @@ void BFitNamespace::ComputeParameterDependentVars (Double_t *a) {
 	Double_t gU1 = a[gammaU1];
 	Double_t gU2 = a[gammaU2];
 	Double_t gU3 = a[gammaU3];
-//	printf("gT2 = %f\n",gT2);
 	tT1 = 1.0 / ( 1.0/t1 + gT1/1000.0);//a[gammaT1]/1000.0 ); // net variable lifetime (1/e) in ms
 	tT2 = 1.0 / ( 1.0/t2 + gT2/1000.0);//a[gammaT2]/1000.0 ); // net variable lifetime (1/e) in ms
 	tT3 = 1.0 / ( 1.0/t3 + gT3/1000.0);//a[gammaT3]/1000.0 ); // net variable lifetime (1/e) in ms
 	tU1 = 1.0 / ( 1.0/t1 + gU1/1000.0);//a[gammaU1]/1000.0 ); // net variable lifetime (1/e) in ms
 	tU2 = 1.0 / ( 1.0/t2 + gU2/1000.0);//a[gammaU2]/1000.0 ); // net variable lifetime (1/e) in ms
 	tU3 = 1.0 / ( 1.0/t3 + gU3/1000.0);//a[gammaU3]/1000.0 ); // net variable lifetime (1/e) in ms
+	
 	if (tT1==tU1 || tT2==tU2 || tT3==tU3) { // this probably won't be needed, since I put the 1000*iota offset in tUi
 	// In the future I hope you won't need the variable lifetimes!
 		printf("\n************************************************************");
@@ -207,6 +227,7 @@ void BFitNamespace::ComputeParameterDependentVars (Double_t *a) {
 		printf("\n************************************************************\n\n");
 	}
 //	printf("tT1=%f, tT2=%f, tT3=%f\ntU1=%f, tU2=%f, tU3=%f\n", tT1, tT2, tT3, tU1, tU2, tU3);
+//	printf("gT1=%f, gT2=%f, gT3=%f\ngU1=%f, gU2=%f, gU3=%f\n", gT1, gT2, gT3, gU1, gU2, gU3);
 // Decay factors
 	aT1 = Exp(-tCap/tT1);
 	aT2 = Exp(-tCap/tT2);

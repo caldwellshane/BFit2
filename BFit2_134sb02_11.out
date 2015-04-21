@@ -1,0 +1,553 @@
+Timestamp = Wed Apr 15 22:06:00 2015
+
+Importing metadata from CSV files...
+Imported 68 BDN cases
+Imported 105 BFit cases
+Performing BFit with BDN case 134sb02 and BFit case 134sb02_11
+
+BFit started. Timer = 0.05 sec.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BETA SINGLES MODEL
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Case: 134sb02
+File: /music/bpt1/bpt/bdn/shane/134sb/rootfiles/134sb02.root
+Histogram: h_betas_vs_cycle_time
+Total cycle time	=     90.000 s
+Background time		=     30.100 s
+Capture cycle time	=      6.000 s
+Last capture time	=      0.000 s
+134-Sn halflife		=      1.050 s  (lifetime      1.515 s)
+134-Sb halflife		=      0.780 s  (lifetime      1.125 s)
+134-Sb-m halflife		=     10.070 s  (lifetime     14.528 s)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HISTOGRAM REBINNED
+   Number of hist bins = 900
+   Number of fn points = 90000
+   Number of pts/bin   = 100
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Doing fit with option string: QROMESLL
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+PARAMETER SEED VALUES
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      Par name  Varying?	Par init val and step
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       # Cyc's         0	244 +/- 0.01
+     Bin width         0	100 +/- 0.01
+       DC rate         1	16 +/- 0.1
+        Rate 1         0	0 +/- 0.0001
+        Rate 2         1	0.006 +/- 0.0001
+        Rate 3         1	0.1 +/- 0.0001
+      Capt eff         0	0.6 +/- 0.01
+      Capt ret         0	1 +/- 0.01
+         T eff         0	0.87 +/- 0.001
+         U eff         0	1 +/- 0.01
+         V eff         1	0.9 +/- 0.0001
+         W eff         0	0 +/- 0.0001
+         X eff         0	1 +/- 0.0001
+         Y eff         0	1 +/- 0.0001
+         Z eff         0	1 +/- 0.0001
+       T1 loss         0	0 +/- 0.01
+       T2 loss         0	0.0052 +/- 0.01
+       T3 loss         0	0.0052 +/- 0.01
+       U1 loss         0	2e-10 +/- 0.01
+       U2 loss         0	2e-10 +/- 0.01
+       U3 loss         0	2e-10 +/- 0.01
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+134-Sb data detected. Forcing gammaT3 = gammaT2. YOU SHOULD GUARANTEE THAT X3 = Y3 = 0. You can set epsX = epsY = 0.
+
+Ini pars (   0): DC=1.6000e+01 r2=6.0000e-03 r3=1.0000e-01 epsV=9.0000e-01 
+New pars (   1): DC=1.6003e+01 r2=6.0000e-03 r3=1.0000e-01 epsV=9.0000e-01 
+New pars (   2): DC=1.5997e+01 r2=6.0000e-03 r3=1.0000e-01 epsV=9.0000e-01 
+New pars (   3): DC=1.6001e+01 r2=6.0000e-03 r3=1.0000e-01 epsV=9.0000e-01 
+New pars (   4): DC=1.5999e+01 r2=6.0000e-03 r3=1.0000e-01 epsV=9.0000e-01 
+New pars (   5): DC=1.6000e+01 r2=6.0028e-03 r3=1.0000e-01 epsV=9.0000e-01 
+New pars (   6): DC=1.6000e+01 r2=5.9972e-03 r3=1.0000e-01 epsV=9.0000e-01 
+New pars (   7): DC=1.6000e+01 r2=6.0083e-03 r3=1.0000e-01 epsV=9.0000e-01 
+New pars (   8): DC=1.6000e+01 r2=5.9917e-03 r3=1.0000e-01 epsV=9.0000e-01 
+New pars (   9): DC=1.6000e+01 r2=6.0000e-03 r3=1.0000e-01 epsV=9.0000e-01 
+New pars (  10): DC=1.6000e+01 r2=6.0000e-03 r3=9.9997e-02 epsV=9.0000e-01 
+New pars (  11): DC=1.6000e+01 r2=6.0000e-03 r3=1.0002e-01 epsV=9.0000e-01 
+New pars (  12): DC=1.6000e+01 r2=6.0000e-03 r3=9.9984e-02 epsV=9.0000e-01 
+New pars (  13): DC=1.6000e+01 r2=6.0000e-03 r3=1.0000e-01 epsV=9.0000e-01 
+New pars (  14): DC=1.7598e+01 r2=1.8975e-02 r3=1.2739e-01 epsV=8.3091e-01 
+New pars (  15): DC=1.6531e+01 r2=1.0314e-02 r3=1.0911e-01 epsV=8.7703e-01 
+New pars (  16): DC=1.6532e+01 r2=1.0314e-02 r3=1.0911e-01 epsV=8.7703e-01 
+New pars (  17): DC=1.6531e+01 r2=1.0314e-02 r3=1.0911e-01 epsV=8.7703e-01 
+New pars (  18): DC=1.6531e+01 r2=1.0318e-02 r3=1.0911e-01 epsV=8.7703e-01 
+New pars (  19): DC=1.6531e+01 r2=1.0310e-02 r3=1.0911e-01 epsV=8.7703e-01 
+New pars (  20): DC=1.6531e+01 r2=1.0314e-02 r3=1.0911e-01 epsV=8.7703e-01 
+New pars (  21): DC=1.6531e+01 r2=1.0314e-02 r3=1.0910e-01 epsV=8.7703e-01 
+New pars (  22): DC=1.6531e+01 r2=1.0314e-02 r3=1.0911e-01 epsV=8.7705e-01 
+New pars (  23): DC=1.6298e+01 r2=1.2369e-02 r3=1.0894e-01 epsV=8.7702e-01 
+New pars (  24): DC=1.6053e+01 r2=1.4522e-02 r3=1.0876e-01 epsV=8.7702e-01 
+New pars (  25): DC=1.6053e+01 r2=1.4522e-02 r3=1.0876e-01 epsV=8.7702e-01 
+New pars (  26): DC=1.6052e+01 r2=1.4522e-02 r3=1.0876e-01 epsV=8.7702e-01 
+New pars (  27): DC=1.6053e+01 r2=1.4525e-02 r3=1.0876e-01 epsV=8.7702e-01 
+New pars (  28): DC=1.6053e+01 r2=1.4518e-02 r3=1.0876e-01 epsV=8.7702e-01 
+New pars (  29): DC=1.6053e+01 r2=1.4522e-02 r3=1.0877e-01 epsV=8.7702e-01 
+New pars (  30): DC=1.6053e+01 r2=1.4522e-02 r3=1.0875e-01 epsV=8.7702e-01 
+New pars (  31): DC=1.6053e+01 r2=1.4522e-02 r3=1.0876e-01 epsV=8.7703e-01 
+New pars (  32): DC=1.6013e+01 r2=1.4414e-02 r3=1.0887e-01 epsV=8.7632e-01 
+New pars (  33): DC=1.5856e+01 r2=1.3981e-02 r3=1.0931e-01 epsV=8.7354e-01 
+New pars (  34): DC=1.5856e+01 r2=1.3981e-02 r3=1.0931e-01 epsV=8.7354e-01 
+New pars (  35): DC=1.5855e+01 r2=1.3981e-02 r3=1.0931e-01 epsV=8.7354e-01 
+New pars (  36): DC=1.5856e+01 r2=1.3985e-02 r3=1.0931e-01 epsV=8.7354e-01 
+New pars (  37): DC=1.5856e+01 r2=1.3977e-02 r3=1.0931e-01 epsV=8.7354e-01 
+New pars (  38): DC=1.5856e+01 r2=1.3981e-02 r3=1.0932e-01 epsV=8.7354e-01 
+New pars (  39): DC=1.5856e+01 r2=1.3981e-02 r3=1.0931e-01 epsV=8.7354e-01 
+New pars (  40): DC=1.5856e+01 r2=1.3981e-02 r3=1.0931e-01 epsV=8.7355e-01 
+New pars (  41): DC=1.5797e+01 r2=1.3601e-02 r3=1.0972e-01 epsV=8.7070e-01 
+New pars (  42): DC=1.5752e+01 r2=1.3308e-02 r3=1.1003e-01 epsV=8.6852e-01 
+New pars (  43): DC=1.5753e+01 r2=1.3308e-02 r3=1.1003e-01 epsV=8.6852e-01 
+New pars (  44): DC=1.5752e+01 r2=1.3308e-02 r3=1.1003e-01 epsV=8.6852e-01 
+New pars (  45): DC=1.5752e+01 r2=1.3312e-02 r3=1.1003e-01 epsV=8.6852e-01 
+New pars (  46): DC=1.5752e+01 r2=1.3305e-02 r3=1.1003e-01 epsV=8.6852e-01 
+New pars (  47): DC=1.5752e+01 r2=1.3308e-02 r3=1.1003e-01 epsV=8.6852e-01 
+New pars (  48): DC=1.5752e+01 r2=1.3308e-02 r3=1.1002e-01 epsV=8.6852e-01 
+New pars (  49): DC=1.5752e+01 r2=1.3308e-02 r3=1.1003e-01 epsV=8.6854e-01 
+New pars (  50): DC=1.5754e+01 r2=1.3307e-02 r3=1.0976e-01 epsV=8.6789e-01 
+New pars (  51): DC=1.5761e+01 r2=1.3301e-02 r3=1.0870e-01 epsV=8.6534e-01 
+New pars (  52): DC=1.5779e+01 r2=1.3287e-02 r3=1.0605e-01 epsV=8.5898e-01 
+New pars (  53): DC=1.5803e+01 r2=1.3268e-02 r3=1.0265e-01 epsV=8.5083e-01 
+New pars (  54): DC=1.5807e+01 r2=1.3265e-02 r3=1.0210e-01 epsV=8.4950e-01 
+New pars (  55): DC=1.5807e+01 r2=1.3265e-02 r3=1.0210e-01 epsV=8.4950e-01 
+New pars (  56): DC=1.5806e+01 r2=1.3265e-02 r3=1.0210e-01 epsV=8.4950e-01 
+New pars (  57): DC=1.5807e+01 r2=1.3268e-02 r3=1.0210e-01 epsV=8.4950e-01 
+New pars (  58): DC=1.5807e+01 r2=1.3261e-02 r3=1.0210e-01 epsV=8.4950e-01 
+New pars (  59): DC=1.5807e+01 r2=1.3265e-02 r3=1.0211e-01 epsV=8.4950e-01 
+New pars (  60): DC=1.5807e+01 r2=1.3265e-02 r3=1.0209e-01 epsV=8.4950e-01 
+New pars (  61): DC=1.5807e+01 r2=1.3265e-02 r3=1.0210e-01 epsV=8.4952e-01 
+New pars (  62): DC=1.5618e+01 r2=1.2328e-02 r3=9.7869e-02 epsV=8.3150e-01 
+New pars (  63): DC=1.5552e+01 r2=1.2002e-02 r3=9.6396e-02 epsV=8.2523e-01 
+New pars (  64): DC=1.5618e+01 r2=1.2328e-02 r3=9.7869e-02 epsV=8.3150e-01 
+New pars (  65): DC=1.5617e+01 r2=1.2328e-02 r3=9.7869e-02 epsV=8.3150e-01 
+New pars (  66): DC=1.5618e+01 r2=1.2331e-02 r3=9.7869e-02 epsV=8.3150e-01 
+New pars (  67): DC=1.5618e+01 r2=1.2325e-02 r3=9.7869e-02 epsV=8.3150e-01 
+New pars (  68): DC=1.5618e+01 r2=1.2328e-02 r3=9.7875e-02 epsV=8.3150e-01 
+New pars (  69): DC=1.5618e+01 r2=1.2328e-02 r3=9.7863e-02 epsV=8.3150e-01 
+New pars (  70): DC=1.5618e+01 r2=1.2328e-02 r3=9.7869e-02 epsV=8.3152e-01 
+New pars (  71): DC=1.5500e+01 r2=1.1950e-02 r3=9.7530e-02 epsV=8.2523e-01 
+New pars (  72): DC=1.5439e+01 r2=1.1756e-02 r3=9.7357e-02 epsV=8.2203e-01 
+New pars (  73): DC=1.5440e+01 r2=1.1756e-02 r3=9.7357e-02 epsV=8.2203e-01 
+New pars (  74): DC=1.5439e+01 r2=1.1756e-02 r3=9.7357e-02 epsV=8.2203e-01 
+New pars (  75): DC=1.5439e+01 r2=1.1760e-02 r3=9.7357e-02 epsV=8.2203e-01 
+New pars (  76): DC=1.5439e+01 r2=1.1753e-02 r3=9.7357e-02 epsV=8.2203e-01 
+New pars (  77): DC=1.5439e+01 r2=1.1756e-02 r3=9.7362e-02 epsV=8.2203e-01 
+New pars (  78): DC=1.5439e+01 r2=1.1756e-02 r3=9.7351e-02 epsV=8.2203e-01 
+New pars (  79): DC=1.5439e+01 r2=1.1756e-02 r3=9.7357e-02 epsV=8.2205e-01 
+New pars (  80): DC=1.5434e+01 r2=1.1783e-02 r3=9.6620e-02 epsV=8.1913e-01 
+New pars (  81): DC=1.5427e+01 r2=1.1816e-02 r3=9.5697e-02 epsV=8.1550e-01 
+New pars (  82): DC=1.5426e+01 r2=1.1819e-02 r3=9.5602e-02 epsV=8.1512e-01 
+New pars (  83): DC=1.5427e+01 r2=1.1819e-02 r3=9.5602e-02 epsV=8.1512e-01 
+New pars (  84): DC=1.5426e+01 r2=1.1819e-02 r3=9.5602e-02 epsV=8.1512e-01 
+New pars (  85): DC=1.5426e+01 r2=1.1822e-02 r3=9.5602e-02 epsV=8.1512e-01 
+New pars (  86): DC=1.5426e+01 r2=1.1816e-02 r3=9.5602e-02 epsV=8.1512e-01 
+New pars (  87): DC=1.5426e+01 r2=1.1819e-02 r3=9.5607e-02 epsV=8.1512e-01 
+New pars (  88): DC=1.5426e+01 r2=1.1819e-02 r3=9.5596e-02 epsV=8.1512e-01 
+New pars (  89): DC=1.5426e+01 r2=1.1819e-02 r3=9.5602e-02 epsV=8.1514e-01 
+New pars (  90): DC=1.5389e+01 r2=1.1470e-02 r3=9.3332e-02 epsV=8.0606e-01 
+New pars (  91): DC=1.5398e+01 r2=1.1553e-02 r3=9.3872e-02 epsV=8.0822e-01 
+New pars (  92): DC=1.5398e+01 r2=1.1553e-02 r3=9.3872e-02 epsV=8.0822e-01 
+New pars (  93): DC=1.5397e+01 r2=1.1553e-02 r3=9.3872e-02 epsV=8.0822e-01 
+New pars (  94): DC=1.5398e+01 r2=1.1556e-02 r3=9.3872e-02 epsV=8.0822e-01 
+New pars (  95): DC=1.5398e+01 r2=1.1550e-02 r3=9.3872e-02 epsV=8.0822e-01 
+New pars (  96): DC=1.5398e+01 r2=1.1553e-02 r3=9.3878e-02 epsV=8.0822e-01 
+New pars (  97): DC=1.5398e+01 r2=1.1553e-02 r3=9.3867e-02 epsV=8.0822e-01 
+New pars (  98): DC=1.5398e+01 r2=1.1553e-02 r3=9.3872e-02 epsV=8.0823e-01 
+New pars (  99): DC=1.5395e+01 r2=1.1446e-02 r3=9.3787e-02 epsV=8.0705e-01 
+New pars ( 100): DC=1.5396e+01 r2=1.1446e-02 r3=9.3787e-02 epsV=8.0705e-01 
+New pars ( 101): DC=1.5395e+01 r2=1.1446e-02 r3=9.3787e-02 epsV=8.0705e-01 
+New pars ( 102): DC=1.5395e+01 r2=1.1448e-02 r3=9.3787e-02 epsV=8.0705e-01 
+New pars ( 103): DC=1.5395e+01 r2=1.1443e-02 r3=9.3787e-02 epsV=8.0705e-01 
+New pars ( 104): DC=1.5395e+01 r2=1.1446e-02 r3=9.3792e-02 epsV=8.0705e-01 
+New pars ( 105): DC=1.5395e+01 r2=1.1446e-02 r3=9.3782e-02 epsV=8.0705e-01 
+New pars ( 106): DC=1.5395e+01 r2=1.1446e-02 r3=9.3787e-02 epsV=8.0707e-01 
+New pars ( 107): DC=1.5387e+01 r2=1.1430e-02 r3=9.3551e-02 epsV=8.0592e-01 
+New pars ( 108): DC=1.5383e+01 r2=1.1422e-02 r3=9.3423e-02 epsV=8.0531e-01 
+New pars ( 109): DC=1.5383e+01 r2=1.1422e-02 r3=9.3423e-02 epsV=8.0531e-01 
+New pars ( 110): DC=1.5382e+01 r2=1.1422e-02 r3=9.3423e-02 epsV=8.0531e-01 
+New pars ( 111): DC=1.5383e+01 r2=1.1425e-02 r3=9.3423e-02 epsV=8.0531e-01 
+New pars ( 112): DC=1.5383e+01 r2=1.1419e-02 r3=9.3423e-02 epsV=8.0531e-01 
+New pars ( 113): DC=1.5383e+01 r2=1.1422e-02 r3=9.3428e-02 epsV=8.0531e-01 
+New pars ( 114): DC=1.5383e+01 r2=1.1422e-02 r3=9.3417e-02 epsV=8.0531e-01 
+New pars ( 115): DC=1.5383e+01 r2=1.1422e-02 r3=9.3423e-02 epsV=8.0532e-01 
+New pars ( 116): DC=1.5383e+01 r2=1.1422e-02 r3=9.3416e-02 epsV=8.0528e-01 
+New pars ( 117): DC=1.5384e+01 r2=1.1422e-02 r3=9.3416e-02 epsV=8.0528e-01 
+New pars ( 118): DC=1.5383e+01 r2=1.1422e-02 r3=9.3416e-02 epsV=8.0528e-01 
+New pars ( 119): DC=1.5383e+01 r2=1.1425e-02 r3=9.3416e-02 epsV=8.0528e-01 
+New pars ( 120): DC=1.5383e+01 r2=1.1419e-02 r3=9.3416e-02 epsV=8.0528e-01 
+New pars ( 121): DC=1.5383e+01 r2=1.1422e-02 r3=9.3421e-02 epsV=8.0528e-01 
+New pars ( 122): DC=1.5383e+01 r2=1.1422e-02 r3=9.3411e-02 epsV=8.0528e-01 
+New pars ( 123): DC=1.5383e+01 r2=1.1422e-02 r3=9.3416e-02 epsV=8.0530e-01 
+New pars ( 124): DC=1.5383e+01 r2=1.1421e-02 r3=9.3411e-02 epsV=8.0526e-01 
+New pars ( 125): DC=1.5383e+01 r2=1.1421e-02 r3=9.3411e-02 epsV=8.0526e-01 
+New pars ( 126): DC=1.5384e+01 r2=1.1421e-02 r3=9.3411e-02 epsV=8.0526e-01 
+New pars ( 127): DC=1.5383e+01 r2=1.1421e-02 r3=9.3411e-02 epsV=8.0526e-01 
+New pars ( 128): DC=1.5383e+01 r2=1.1424e-02 r3=9.3411e-02 epsV=8.0526e-01 
+New pars ( 129): DC=1.5383e+01 r2=1.1418e-02 r3=9.3411e-02 epsV=8.0526e-01 
+New pars ( 130): DC=1.5383e+01 r2=1.1421e-02 r3=9.3416e-02 epsV=8.0526e-01 
+New pars ( 131): DC=1.5383e+01 r2=1.1421e-02 r3=9.3406e-02 epsV=8.0526e-01 
+New pars ( 132): DC=1.5383e+01 r2=1.1421e-02 r3=9.3411e-02 epsV=8.0528e-01 
+New pars ( 133): DC=1.5290e+01 r2=1.0906e-02 r3=9.6657e-02 epsV=8.1467e-01 
+New pars ( 134): DC=1.5307e+01 r2=1.0906e-02 r3=9.6657e-02 epsV=8.1467e-01 
+New pars ( 135): DC=1.5290e+01 r2=1.0895e-02 r3=9.6657e-02 epsV=8.1467e-01 
+New pars ( 136): DC=1.5290e+01 r2=1.0906e-02 r3=9.6317e-02 epsV=8.1467e-01 
+New pars ( 137): DC=1.5290e+01 r2=1.0906e-02 r3=9.6657e-02 epsV=8.0563e-01 
+New pars ( 138): DC=1.5298e+01 r2=1.0901e-02 r3=9.6487e-02 epsV=8.1015e-01 
+New pars ( 139): DC=1.5303e+01 r2=1.0898e-02 r3=9.6402e-02 epsV=8.0789e-01 
+New pars ( 140): DC=1.5305e+01 r2=1.0913e-02 r3=9.6360e-02 epsV=8.0676e-01 
+New pars ( 141): DC=1.5303e+01 r2=1.0898e-02 r3=9.6402e-02 epsV=8.0789e-01 
+New pars ( 142): DC=1.5383e+01 r2=1.1421e-02 r3=9.3411e-02 epsV=8.0526e-01 
+New pars ( 143): DC=1.5384e+01 r2=1.1421e-02 r3=9.3411e-02 epsV=8.0526e-01 
+New pars ( 144): DC=1.5383e+01 r2=1.1421e-02 r3=9.3411e-02 epsV=8.0526e-01 
+New pars ( 145): DC=1.5383e+01 r2=1.1424e-02 r3=9.3411e-02 epsV=8.0526e-01 
+New pars ( 146): DC=1.5383e+01 r2=1.1418e-02 r3=9.3411e-02 epsV=8.0526e-01 
+New pars ( 147): DC=1.5383e+01 r2=1.1421e-02 r3=9.3416e-02 epsV=8.0526e-01 
+New pars ( 148): DC=1.5383e+01 r2=1.1421e-02 r3=9.3406e-02 epsV=8.0526e-01 
+New pars ( 149): DC=1.5383e+01 r2=1.1421e-02 r3=9.3411e-02 epsV=8.0528e-01 
+New pars ( 150): DC=1.5384e+01 r2=1.1421e-02 r3=9.3411e-02 epsV=8.0526e-01 
+New pars ( 151): DC=1.5383e+01 r2=1.1421e-02 r3=9.3411e-02 epsV=8.0526e-01 
+New pars ( 152): DC=1.5383e+01 r2=1.1422e-02 r3=9.3411e-02 epsV=8.0526e-01 
+New pars ( 153): DC=1.5383e+01 r2=1.1421e-02 r3=9.3411e-02 epsV=8.0526e-01 
+New pars ( 154): DC=1.5383e+01 r2=1.1421e-02 r3=9.3412e-02 epsV=8.0526e-01 
+New pars ( 155): DC=1.5383e+01 r2=1.1421e-02 r3=9.3410e-02 epsV=8.0526e-01 
+New pars ( 156): DC=1.5383e+01 r2=1.1421e-02 r3=9.3411e-02 epsV=8.0526e-01 
+New pars ( 157): DC=1.5384e+01 r2=1.1424e-02 r3=9.3411e-02 epsV=8.0526e-01 
+New pars ( 158): DC=1.5384e+01 r2=1.1421e-02 r3=9.3416e-02 epsV=8.0526e-01 
+New pars ( 159): DC=1.5383e+01 r2=1.1424e-02 r3=9.3416e-02 epsV=8.0526e-01 
+New pars ( 160): DC=1.5384e+01 r2=1.1421e-02 r3=9.3411e-02 epsV=8.0528e-01 
+New pars ( 161): DC=1.5383e+01 r2=1.1424e-02 r3=9.3411e-02 epsV=8.0528e-01 
+New pars ( 162): DC=1.5383e+01 r2=1.1421e-02 r3=9.3416e-02 epsV=8.0528e-01 
+ PARAMETER NUMBER   1 NOT A VARIABLE. IGNORED.
+ THERE ARE NO MINOS ERRORS TO CALCULATE.
+ PARAMETER NUMBER   2 NOT A VARIABLE. IGNORED.
+ THERE ARE NO MINOS ERRORS TO CALCULATE.
+New pars ( 163): DC=1.5471e+01 r2=1.1689e-02 r3=9.4783e-02 epsV=8.1358e-01 
+New pars ( 164): DC=1.5471e+01 r2=1.1692e-02 r3=9.4783e-02 epsV=8.1358e-01 
+New pars ( 165): DC=1.5471e+01 r2=1.1686e-02 r3=9.4783e-02 epsV=8.1358e-01 
+New pars ( 166): DC=1.5471e+01 r2=1.1689e-02 r3=9.4788e-02 epsV=8.1358e-01 
+New pars ( 167): DC=1.5471e+01 r2=1.1689e-02 r3=9.4777e-02 epsV=8.1358e-01 
+New pars ( 168): DC=1.5471e+01 r2=1.1689e-02 r3=9.4783e-02 epsV=8.1360e-01 
+New pars ( 169): DC=1.5471e+01 r2=1.1685e-02 r3=9.4719e-02 epsV=8.1322e-01 
+New pars ( 170): DC=1.5471e+01 r2=1.1686e-02 r3=9.4728e-02 epsV=8.1327e-01 
+New pars ( 171): DC=1.5471e+01 r2=1.1689e-02 r3=9.4728e-02 epsV=8.1327e-01 
+New pars ( 172): DC=1.5471e+01 r2=1.1683e-02 r3=9.4728e-02 epsV=8.1327e-01 
+New pars ( 173): DC=1.5471e+01 r2=1.1686e-02 r3=9.4733e-02 epsV=8.1327e-01 
+New pars ( 174): DC=1.5471e+01 r2=1.1686e-02 r3=9.4723e-02 epsV=8.1327e-01 
+New pars ( 175): DC=1.5471e+01 r2=1.1686e-02 r3=9.4728e-02 epsV=8.1329e-01 
+New pars ( 176): DC=1.5471e+01 r2=1.1690e-02 r3=9.4771e-02 epsV=8.1342e-01 
+New pars ( 177): DC=1.5471e+01 r2=1.1690e-02 r3=9.4777e-02 epsV=8.1344e-01 
+New pars ( 178): DC=1.5471e+01 r2=1.1693e-02 r3=9.4777e-02 epsV=8.1344e-01 
+New pars ( 179): DC=1.5471e+01 r2=1.1687e-02 r3=9.4777e-02 epsV=8.1344e-01 
+New pars ( 180): DC=1.5471e+01 r2=1.1690e-02 r3=9.4783e-02 epsV=8.1344e-01 
+New pars ( 181): DC=1.5471e+01 r2=1.1690e-02 r3=9.4772e-02 epsV=8.1344e-01 
+New pars ( 182): DC=1.5471e+01 r2=1.1690e-02 r3=9.4777e-02 epsV=8.1346e-01 
+New pars ( 183): DC=1.5296e+01 r2=1.1154e-02 r3=9.2040e-02 epsV=7.9694e-01 
+New pars ( 184): DC=1.5296e+01 r2=1.1157e-02 r3=9.2040e-02 epsV=7.9694e-01 
+New pars ( 185): DC=1.5296e+01 r2=1.1151e-02 r3=9.2040e-02 epsV=7.9694e-01 
+New pars ( 186): DC=1.5296e+01 r2=1.1154e-02 r3=9.2045e-02 epsV=7.9694e-01 
+New pars ( 187): DC=1.5296e+01 r2=1.1154e-02 r3=9.2034e-02 epsV=7.9694e-01 
+New pars ( 188): DC=1.5296e+01 r2=1.1154e-02 r3=9.2040e-02 epsV=7.9696e-01 
+New pars ( 189): DC=1.5296e+01 r2=1.1166e-02 r3=9.2152e-02 epsV=7.9722e-01 
+New pars ( 190): DC=1.5296e+01 r2=1.1163e-02 r3=9.2121e-02 epsV=7.9714e-01 
+New pars ( 191): DC=1.5296e+01 r2=1.1165e-02 r3=9.2121e-02 epsV=7.9714e-01 
+New pars ( 192): DC=1.5296e+01 r2=1.1160e-02 r3=9.2121e-02 epsV=7.9714e-01 
+New pars ( 193): DC=1.5296e+01 r2=1.1163e-02 r3=9.2126e-02 epsV=7.9714e-01 
+New pars ( 194): DC=1.5296e+01 r2=1.1163e-02 r3=9.2116e-02 epsV=7.9714e-01 
+New pars ( 195): DC=1.5296e+01 r2=1.1163e-02 r3=9.2121e-02 epsV=7.9716e-01 
+New pars ( 196): DC=1.5296e+01 r2=1.1159e-02 r3=9.2069e-02 epsV=7.9693e-01 
+New pars ( 197): DC=1.5296e+01 r2=1.1156e-02 r3=9.2039e-02 epsV=7.9681e-01 
+New pars ( 198): DC=1.5296e+01 r2=1.1159e-02 r3=9.2039e-02 epsV=7.9681e-01 
+New pars ( 199): DC=1.5296e+01 r2=1.1153e-02 r3=9.2039e-02 epsV=7.9681e-01 
+New pars ( 200): DC=1.5296e+01 r2=1.1156e-02 r3=9.2044e-02 epsV=7.9681e-01 
+New pars ( 201): DC=1.5296e+01 r2=1.1156e-02 r3=9.2034e-02 epsV=7.9681e-01 
+New pars ( 202): DC=1.5296e+01 r2=1.1156e-02 r3=9.2039e-02 epsV=7.9683e-01 
+ PARAMETER NUMBER   4 NOT A VARIABLE. IGNORED.
+ THERE ARE NO MINOS ERRORS TO CALCULATE.
+New pars ( 203): DC=1.5441e+01 r2=1.1827e-02 r3=9.5021e-02 epsV=8.1405e-01 
+New pars ( 204): DC=1.5441e+01 r2=1.1827e-02 r3=9.5021e-02 epsV=8.1405e-01 
+New pars ( 205): DC=1.5440e+01 r2=1.1827e-02 r3=9.5021e-02 epsV=8.1405e-01 
+New pars ( 206): DC=1.5441e+01 r2=1.1827e-02 r3=9.5026e-02 epsV=8.1405e-01 
+New pars ( 207): DC=1.5441e+01 r2=1.1827e-02 r3=9.5016e-02 epsV=8.1405e-01 
+New pars ( 208): DC=1.5441e+01 r2=1.1827e-02 r3=9.5021e-02 epsV=8.1407e-01 
+New pars ( 209): DC=1.5440e+01 r2=1.1827e-02 r3=9.4921e-02 epsV=8.1351e-01 
+New pars ( 210): DC=1.5440e+01 r2=1.1827e-02 r3=9.4938e-02 epsV=8.1360e-01 
+New pars ( 211): DC=1.5440e+01 r2=1.1827e-02 r3=9.4938e-02 epsV=8.1360e-01 
+New pars ( 212): DC=1.5439e+01 r2=1.1827e-02 r3=9.4938e-02 epsV=8.1360e-01 
+New pars ( 213): DC=1.5440e+01 r2=1.1827e-02 r3=9.4944e-02 epsV=8.1360e-01 
+New pars ( 214): DC=1.5440e+01 r2=1.1827e-02 r3=9.4933e-02 epsV=8.1360e-01 
+New pars ( 215): DC=1.5440e+01 r2=1.1827e-02 r3=9.4938e-02 epsV=8.1362e-01 
+New pars ( 216): DC=1.5440e+01 r2=1.1827e-02 r3=9.4983e-02 epsV=8.1374e-01 
+New pars ( 217): DC=1.5440e+01 r2=1.1827e-02 r3=9.4990e-02 epsV=8.1377e-01 
+New pars ( 218): DC=1.5441e+01 r2=1.1827e-02 r3=9.4990e-02 epsV=8.1377e-01 
+New pars ( 219): DC=1.5440e+01 r2=1.1827e-02 r3=9.4990e-02 epsV=8.1377e-01 
+New pars ( 220): DC=1.5440e+01 r2=1.1827e-02 r3=9.4995e-02 epsV=8.1377e-01 
+New pars ( 221): DC=1.5440e+01 r2=1.1827e-02 r3=9.4985e-02 epsV=8.1377e-01 
+New pars ( 222): DC=1.5440e+01 r2=1.1827e-02 r3=9.4990e-02 epsV=8.1379e-01 
+New pars ( 223): DC=1.5440e+01 r2=1.1831e-02 r3=9.4990e-02 epsV=8.1377e-01 
+New pars ( 224): DC=1.5441e+01 r2=1.1831e-02 r3=9.4990e-02 epsV=8.1377e-01 
+New pars ( 225): DC=1.5440e+01 r2=1.1831e-02 r3=9.4990e-02 epsV=8.1377e-01 
+New pars ( 226): DC=1.5440e+01 r2=1.1831e-02 r3=9.4995e-02 epsV=8.1377e-01 
+New pars ( 227): DC=1.5440e+01 r2=1.1831e-02 r3=9.4985e-02 epsV=8.1377e-01 
+New pars ( 228): DC=1.5440e+01 r2=1.1831e-02 r3=9.4990e-02 epsV=8.1379e-01 
+New pars ( 229): DC=1.5441e+01 r2=1.1831e-02 r3=9.5006e-02 epsV=8.1386e-01 
+New pars ( 230): DC=1.5441e+01 r2=1.1831e-02 r3=9.5006e-02 epsV=8.1386e-01 
+New pars ( 231): DC=1.5440e+01 r2=1.1831e-02 r3=9.5006e-02 epsV=8.1386e-01 
+New pars ( 232): DC=1.5441e+01 r2=1.1831e-02 r3=9.5012e-02 epsV=8.1386e-01 
+New pars ( 233): DC=1.5441e+01 r2=1.1831e-02 r3=9.5001e-02 epsV=8.1386e-01 
+New pars ( 234): DC=1.5441e+01 r2=1.1831e-02 r3=9.5006e-02 epsV=8.1387e-01 
+New pars ( 235): DC=1.5326e+01 r2=1.1016e-02 r3=9.1802e-02 epsV=7.9647e-01 
+New pars ( 236): DC=1.5326e+01 r2=1.1016e-02 r3=9.1802e-02 epsV=7.9647e-01 
+New pars ( 237): DC=1.5325e+01 r2=1.1016e-02 r3=9.1802e-02 epsV=7.9647e-01 
+New pars ( 238): DC=1.5326e+01 r2=1.1016e-02 r3=9.1807e-02 epsV=7.9647e-01 
+New pars ( 239): DC=1.5326e+01 r2=1.1016e-02 r3=9.1796e-02 epsV=7.9647e-01 
+New pars ( 240): DC=1.5326e+01 r2=1.1016e-02 r3=9.1802e-02 epsV=7.9648e-01 
+New pars ( 241): DC=1.5327e+01 r2=1.1016e-02 r3=9.1904e-02 epsV=7.9666e-01 
+New pars ( 242): DC=1.5327e+01 r2=1.1016e-02 r3=9.1882e-02 epsV=7.9662e-01 
+New pars ( 243): DC=1.5327e+01 r2=1.1016e-02 r3=9.1882e-02 epsV=7.9662e-01 
+New pars ( 244): DC=1.5326e+01 r2=1.1016e-02 r3=9.1882e-02 epsV=7.9662e-01 
+New pars ( 245): DC=1.5327e+01 r2=1.1016e-02 r3=9.1887e-02 epsV=7.9662e-01 
+New pars ( 246): DC=1.5327e+01 r2=1.1016e-02 r3=9.1877e-02 epsV=7.9662e-01 
+New pars ( 247): DC=1.5327e+01 r2=1.1016e-02 r3=9.1882e-02 epsV=7.9664e-01 
+New pars ( 248): DC=1.5326e+01 r2=1.1016e-02 r3=9.1813e-02 epsV=7.9634e-01 
+New pars ( 249): DC=1.5325e+01 r2=1.1016e-02 r3=9.1773e-02 epsV=7.9618e-01 
+New pars ( 250): DC=1.5326e+01 r2=1.1016e-02 r3=9.1773e-02 epsV=7.9618e-01 
+New pars ( 251): DC=1.5325e+01 r2=1.1016e-02 r3=9.1773e-02 epsV=7.9618e-01 
+New pars ( 252): DC=1.5325e+01 r2=1.1016e-02 r3=9.1778e-02 epsV=7.9618e-01 
+New pars ( 253): DC=1.5325e+01 r2=1.1016e-02 r3=9.1768e-02 epsV=7.9618e-01 
+New pars ( 254): DC=1.5325e+01 r2=1.1016e-02 r3=9.1773e-02 epsV=7.9619e-01 
+New pars ( 255): DC=1.5325e+01 r2=1.1021e-02 r3=9.1773e-02 epsV=7.9618e-01 
+New pars ( 256): DC=1.5326e+01 r2=1.1021e-02 r3=9.1773e-02 epsV=7.9618e-01 
+New pars ( 257): DC=1.5325e+01 r2=1.1021e-02 r3=9.1773e-02 epsV=7.9618e-01 
+New pars ( 258): DC=1.5325e+01 r2=1.1021e-02 r3=9.1778e-02 epsV=7.9618e-01 
+New pars ( 259): DC=1.5325e+01 r2=1.1021e-02 r3=9.1768e-02 epsV=7.9618e-01 
+New pars ( 260): DC=1.5325e+01 r2=1.1021e-02 r3=9.1773e-02 epsV=7.9619e-01 
+New pars ( 261): DC=1.5326e+01 r2=1.1021e-02 r3=9.1792e-02 epsV=7.9629e-01 
+New pars ( 262): DC=1.5327e+01 r2=1.1021e-02 r3=9.1792e-02 epsV=7.9629e-01 
+New pars ( 263): DC=1.5326e+01 r2=1.1021e-02 r3=9.1792e-02 epsV=7.9629e-01 
+New pars ( 264): DC=1.5326e+01 r2=1.1021e-02 r3=9.1798e-02 epsV=7.9629e-01 
+New pars ( 265): DC=1.5326e+01 r2=1.1021e-02 r3=9.1787e-02 epsV=7.9629e-01 
+New pars ( 266): DC=1.5326e+01 r2=1.1021e-02 r3=9.1792e-02 epsV=7.9631e-01 
+New pars ( 267): DC=1.5432e+01 r2=1.1686e-02 r3=9.5879e-02 epsV=8.1600e-01 
+New pars ( 268): DC=1.5432e+01 r2=1.1686e-02 r3=9.5879e-02 epsV=8.1600e-01 
+New pars ( 269): DC=1.5431e+01 r2=1.1686e-02 r3=9.5879e-02 epsV=8.1600e-01 
+New pars ( 270): DC=1.5432e+01 r2=1.1688e-02 r3=9.5879e-02 epsV=8.1600e-01 
+New pars ( 271): DC=1.5432e+01 r2=1.1683e-02 r3=9.5879e-02 epsV=8.1600e-01 
+New pars ( 272): DC=1.5432e+01 r2=1.1686e-02 r3=9.5879e-02 epsV=8.1602e-01 
+New pars ( 273): DC=1.5430e+01 r2=1.1678e-02 r3=9.5879e-02 epsV=8.1564e-01 
+New pars ( 274): DC=1.5431e+01 r2=1.1678e-02 r3=9.5879e-02 epsV=8.1567e-01 
+New pars ( 275): DC=1.5431e+01 r2=1.1678e-02 r3=9.5879e-02 epsV=8.1567e-01 
+New pars ( 276): DC=1.5430e+01 r2=1.1678e-02 r3=9.5879e-02 epsV=8.1567e-01 
+New pars ( 277): DC=1.5431e+01 r2=1.1681e-02 r3=9.5879e-02 epsV=8.1567e-01 
+New pars ( 278): DC=1.5431e+01 r2=1.1675e-02 r3=9.5879e-02 epsV=8.1567e-01 
+New pars ( 279): DC=1.5431e+01 r2=1.1678e-02 r3=9.5879e-02 epsV=8.1568e-01 
+New pars ( 280): DC=1.5432e+01 r2=1.1684e-02 r3=9.5879e-02 epsV=8.1572e-01 
+New pars ( 281): DC=1.5432e+01 r2=1.1684e-02 r3=9.5879e-02 epsV=8.1572e-01 
+New pars ( 282): DC=1.5432e+01 r2=1.1684e-02 r3=9.5879e-02 epsV=8.1572e-01 
+New pars ( 283): DC=1.5431e+01 r2=1.1684e-02 r3=9.5879e-02 epsV=8.1572e-01 
+New pars ( 284): DC=1.5432e+01 r2=1.1687e-02 r3=9.5879e-02 epsV=8.1572e-01 
+New pars ( 285): DC=1.5432e+01 r2=1.1681e-02 r3=9.5879e-02 epsV=8.1572e-01 
+New pars ( 286): DC=1.5432e+01 r2=1.1684e-02 r3=9.5879e-02 epsV=8.1574e-01 
+New pars ( 287): DC=1.5335e+01 r2=1.1157e-02 r3=9.0943e-02 epsV=7.9451e-01 
+New pars ( 288): DC=1.5335e+01 r2=1.1157e-02 r3=9.0943e-02 epsV=7.9451e-01 
+New pars ( 289): DC=1.5334e+01 r2=1.1157e-02 r3=9.0943e-02 epsV=7.9451e-01 
+New pars ( 290): DC=1.5335e+01 r2=1.1160e-02 r3=9.0943e-02 epsV=7.9451e-01 
+New pars ( 291): DC=1.5335e+01 r2=1.1154e-02 r3=9.0943e-02 epsV=7.9451e-01 
+New pars ( 292): DC=1.5335e+01 r2=1.1157e-02 r3=9.0943e-02 epsV=7.9453e-01 
+New pars ( 293): DC=1.5338e+01 r2=1.1169e-02 r3=9.0943e-02 epsV=7.9438e-01 
+New pars ( 294): DC=1.5338e+01 r2=1.1169e-02 r3=9.0943e-02 epsV=7.9438e-01 
+New pars ( 295): DC=1.5337e+01 r2=1.1169e-02 r3=9.0943e-02 epsV=7.9438e-01 
+New pars ( 296): DC=1.5338e+01 r2=1.1171e-02 r3=9.0943e-02 epsV=7.9438e-01 
+New pars ( 297): DC=1.5338e+01 r2=1.1166e-02 r3=9.0943e-02 epsV=7.9438e-01 
+New pars ( 298): DC=1.5338e+01 r2=1.1169e-02 r3=9.0943e-02 epsV=7.9440e-01 
+New pars ( 299): DC=1.5335e+01 r2=1.1156e-02 r3=9.0943e-02 epsV=7.9423e-01 
+New pars ( 300): DC=1.5336e+01 r2=1.1156e-02 r3=9.0943e-02 epsV=7.9423e-01 
+New pars ( 301): DC=1.5335e+01 r2=1.1156e-02 r3=9.0943e-02 epsV=7.9423e-01 
+New pars ( 302): DC=1.5335e+01 r2=1.1159e-02 r3=9.0943e-02 epsV=7.9423e-01 
+New pars ( 303): DC=1.5335e+01 r2=1.1153e-02 r3=9.0943e-02 epsV=7.9423e-01 
+New pars ( 304): DC=1.5335e+01 r2=1.1156e-02 r3=9.0943e-02 epsV=7.9425e-01 
+New pars ( 305): DC=1.5335e+01 r2=1.1156e-02 r3=9.0943e-02 epsV=7.9422e-01 
+New pars ( 306): DC=1.5336e+01 r2=1.1156e-02 r3=9.0943e-02 epsV=7.9422e-01 
+New pars ( 307): DC=1.5335e+01 r2=1.1156e-02 r3=9.0943e-02 epsV=7.9422e-01 
+New pars ( 308): DC=1.5335e+01 r2=1.1159e-02 r3=9.0943e-02 epsV=7.9422e-01 
+New pars ( 309): DC=1.5335e+01 r2=1.1153e-02 r3=9.0943e-02 epsV=7.9422e-01 
+New pars ( 310): DC=1.5335e+01 r2=1.1156e-02 r3=9.0943e-02 epsV=7.9424e-01 
+ PARAMETER NUMBER   7 NOT A VARIABLE. IGNORED.
+ THERE ARE NO MINOS ERRORS TO CALCULATE.
+ PARAMETER NUMBER   8 NOT A VARIABLE. IGNORED.
+ THERE ARE NO MINOS ERRORS TO CALCULATE.
+ PARAMETER NUMBER   9 NOT A VARIABLE. IGNORED.
+ THERE ARE NO MINOS ERRORS TO CALCULATE.
+ PARAMETER NUMBER  10 NOT A VARIABLE. IGNORED.
+ THERE ARE NO MINOS ERRORS TO CALCULATE.
+New pars ( 311): DC=1.5448e+01 r2=1.1739e-02 r3=9.5773e-02 epsV=8.1649e-01 
+New pars ( 312): DC=1.5449e+01 r2=1.1739e-02 r3=9.5773e-02 epsV=8.1649e-01 
+New pars ( 313): DC=1.5448e+01 r2=1.1739e-02 r3=9.5773e-02 epsV=8.1649e-01 
+New pars ( 314): DC=1.5448e+01 r2=1.1741e-02 r3=9.5773e-02 epsV=8.1649e-01 
+New pars ( 315): DC=1.5448e+01 r2=1.1736e-02 r3=9.5773e-02 epsV=8.1649e-01 
+New pars ( 316): DC=1.5448e+01 r2=1.1739e-02 r3=9.5778e-02 epsV=8.1649e-01 
+New pars ( 317): DC=1.5448e+01 r2=1.1739e-02 r3=9.5767e-02 epsV=8.1649e-01 
+New pars ( 318): DC=1.5451e+01 r2=1.1749e-02 r3=9.5817e-02 epsV=8.1649e-01 
+New pars ( 319): DC=1.5451e+01 r2=1.1749e-02 r3=9.5817e-02 epsV=8.1649e-01 
+New pars ( 320): DC=1.5450e+01 r2=1.1749e-02 r3=9.5817e-02 epsV=8.1649e-01 
+New pars ( 321): DC=1.5451e+01 r2=1.1752e-02 r3=9.5817e-02 epsV=8.1649e-01 
+New pars ( 322): DC=1.5451e+01 r2=1.1746e-02 r3=9.5817e-02 epsV=8.1649e-01 
+New pars ( 323): DC=1.5451e+01 r2=1.1749e-02 r3=9.5823e-02 epsV=8.1649e-01 
+New pars ( 324): DC=1.5451e+01 r2=1.1749e-02 r3=9.5812e-02 epsV=8.1649e-01 
+New pars ( 325): DC=1.5450e+01 r2=1.1749e-02 r3=9.5827e-02 epsV=8.1649e-01 
+New pars ( 326): DC=1.5451e+01 r2=1.1749e-02 r3=9.5827e-02 epsV=8.1649e-01 
+New pars ( 327): DC=1.5450e+01 r2=1.1749e-02 r3=9.5827e-02 epsV=8.1649e-01 
+New pars ( 328): DC=1.5450e+01 r2=1.1752e-02 r3=9.5827e-02 epsV=8.1649e-01 
+New pars ( 329): DC=1.5450e+01 r2=1.1746e-02 r3=9.5827e-02 epsV=8.1649e-01 
+New pars ( 330): DC=1.5450e+01 r2=1.1749e-02 r3=9.5833e-02 epsV=8.1649e-01 
+New pars ( 331): DC=1.5450e+01 r2=1.1749e-02 r3=9.5822e-02 epsV=8.1649e-01 
+New pars ( 332): DC=1.5450e+01 r2=1.1749e-02 r3=9.5827e-02 epsV=8.1619e-01 
+New pars ( 333): DC=1.5451e+01 r2=1.1749e-02 r3=9.5827e-02 epsV=8.1619e-01 
+New pars ( 334): DC=1.5450e+01 r2=1.1749e-02 r3=9.5827e-02 epsV=8.1619e-01 
+New pars ( 335): DC=1.5450e+01 r2=1.1752e-02 r3=9.5827e-02 epsV=8.1619e-01 
+New pars ( 336): DC=1.5450e+01 r2=1.1746e-02 r3=9.5827e-02 epsV=8.1619e-01 
+New pars ( 337): DC=1.5450e+01 r2=1.1749e-02 r3=9.5833e-02 epsV=8.1619e-01 
+New pars ( 338): DC=1.5450e+01 r2=1.1749e-02 r3=9.5822e-02 epsV=8.1619e-01 
+New pars ( 339): DC=1.5448e+01 r2=1.1740e-02 r3=9.5760e-02 epsV=8.1619e-01 
+New pars ( 340): DC=1.5449e+01 r2=1.1740e-02 r3=9.5760e-02 epsV=8.1619e-01 
+New pars ( 341): DC=1.5448e+01 r2=1.1740e-02 r3=9.5760e-02 epsV=8.1619e-01 
+New pars ( 342): DC=1.5448e+01 r2=1.1743e-02 r3=9.5760e-02 epsV=8.1619e-01 
+New pars ( 343): DC=1.5448e+01 r2=1.1737e-02 r3=9.5760e-02 epsV=8.1619e-01 
+New pars ( 344): DC=1.5448e+01 r2=1.1740e-02 r3=9.5765e-02 epsV=8.1619e-01 
+New pars ( 345): DC=1.5448e+01 r2=1.1740e-02 r3=9.5754e-02 epsV=8.1619e-01 
+New pars ( 346): DC=1.5319e+01 r2=1.1104e-02 r3=9.1050e-02 epsV=7.9403e-01 
+New pars ( 347): DC=1.5319e+01 r2=1.1104e-02 r3=9.1050e-02 epsV=7.9403e-01 
+New pars ( 348): DC=1.5318e+01 r2=1.1104e-02 r3=9.1050e-02 epsV=7.9403e-01 
+New pars ( 349): DC=1.5319e+01 r2=1.1107e-02 r3=9.1050e-02 epsV=7.9403e-01 
+New pars ( 350): DC=1.5319e+01 r2=1.1101e-02 r3=9.1050e-02 epsV=7.9403e-01 
+New pars ( 351): DC=1.5319e+01 r2=1.1104e-02 r3=9.1055e-02 epsV=7.9403e-01 
+New pars ( 352): DC=1.5319e+01 r2=1.1104e-02 r3=9.1044e-02 epsV=7.9403e-01 
+New pars ( 353): DC=1.5320e+01 r2=1.1113e-02 r3=9.1123e-02 epsV=7.9403e-01 
+New pars ( 354): DC=1.5320e+01 r2=1.1112e-02 r3=9.1115e-02 epsV=7.9403e-01 
+New pars ( 355): DC=1.5320e+01 r2=1.1112e-02 r3=9.1115e-02 epsV=7.9403e-01 
+New pars ( 356): DC=1.5319e+01 r2=1.1112e-02 r3=9.1115e-02 epsV=7.9403e-01 
+New pars ( 357): DC=1.5320e+01 r2=1.1115e-02 r3=9.1115e-02 epsV=7.9403e-01 
+New pars ( 358): DC=1.5320e+01 r2=1.1109e-02 r3=9.1115e-02 epsV=7.9403e-01 
+New pars ( 359): DC=1.5320e+01 r2=1.1112e-02 r3=9.1120e-02 epsV=7.9403e-01 
+New pars ( 360): DC=1.5320e+01 r2=1.1112e-02 r3=9.1110e-02 epsV=7.9403e-01 
+New pars ( 361): DC=1.5321e+01 r2=1.1114e-02 r3=9.1102e-02 epsV=7.9403e-01 
+New pars ( 362): DC=1.5321e+01 r2=1.1114e-02 r3=9.1102e-02 epsV=7.9403e-01 
+New pars ( 363): DC=1.5320e+01 r2=1.1114e-02 r3=9.1102e-02 epsV=7.9403e-01 
+New pars ( 364): DC=1.5321e+01 r2=1.1116e-02 r3=9.1102e-02 epsV=7.9403e-01 
+New pars ( 365): DC=1.5321e+01 r2=1.1111e-02 r3=9.1102e-02 epsV=7.9403e-01 
+New pars ( 366): DC=1.5321e+01 r2=1.1114e-02 r3=9.1107e-02 epsV=7.9403e-01 
+New pars ( 367): DC=1.5321e+01 r2=1.1114e-02 r3=9.1097e-02 epsV=7.9403e-01 
+New pars ( 368): DC=1.5321e+01 r2=1.1114e-02 r3=9.1102e-02 epsV=7.9374e-01 
+New pars ( 369): DC=1.5321e+01 r2=1.1114e-02 r3=9.1102e-02 epsV=7.9374e-01 
+New pars ( 370): DC=1.5320e+01 r2=1.1114e-02 r3=9.1102e-02 epsV=7.9374e-01 
+New pars ( 371): DC=1.5321e+01 r2=1.1116e-02 r3=9.1102e-02 epsV=7.9374e-01 
+New pars ( 372): DC=1.5321e+01 r2=1.1111e-02 r3=9.1102e-02 epsV=7.9374e-01 
+New pars ( 373): DC=1.5321e+01 r2=1.1114e-02 r3=9.1107e-02 epsV=7.9374e-01 
+New pars ( 374): DC=1.5321e+01 r2=1.1114e-02 r3=9.1097e-02 epsV=7.9374e-01 
+New pars ( 375): DC=1.5319e+01 r2=1.1106e-02 r3=9.1045e-02 epsV=7.9374e-01 
+New pars ( 376): DC=1.5320e+01 r2=1.1106e-02 r3=9.1045e-02 epsV=7.9374e-01 
+New pars ( 377): DC=1.5319e+01 r2=1.1106e-02 r3=9.1045e-02 epsV=7.9374e-01 
+New pars ( 378): DC=1.5319e+01 r2=1.1109e-02 r3=9.1045e-02 epsV=7.9374e-01 
+New pars ( 379): DC=1.5319e+01 r2=1.1103e-02 r3=9.1045e-02 epsV=7.9374e-01 
+New pars ( 380): DC=1.5319e+01 r2=1.1106e-02 r3=9.1050e-02 epsV=7.9374e-01 
+New pars ( 381): DC=1.5319e+01 r2=1.1106e-02 r3=9.1040e-02 epsV=7.9374e-01 
+ PARAMETER NUMBER  12 NOT A VARIABLE. IGNORED.
+ THERE ARE NO MINOS ERRORS TO CALCULATE.
+ PARAMETER NUMBER  13 NOT A VARIABLE. IGNORED.
+ THERE ARE NO MINOS ERRORS TO CALCULATE.
+ PARAMETER NUMBER  14 NOT A VARIABLE. IGNORED.
+ THERE ARE NO MINOS ERRORS TO CALCULATE.
+ PARAMETER NUMBER  15 NOT A VARIABLE. IGNORED.
+ THERE ARE NO MINOS ERRORS TO CALCULATE.
+ PARAMETER NUMBER  16 NOT A VARIABLE. IGNORED.
+ THERE ARE NO MINOS ERRORS TO CALCULATE.
+ PARAMETER NUMBER  17 NOT A VARIABLE. IGNORED.
+ THERE ARE NO MINOS ERRORS TO CALCULATE.
+ PARAMETER NUMBER  18 NOT A VARIABLE. IGNORED.
+ THERE ARE NO MINOS ERRORS TO CALCULATE.
+ PARAMETER NUMBER  19 NOT A VARIABLE. IGNORED.
+ THERE ARE NO MINOS ERRORS TO CALCULATE.
+ PARAMETER NUMBER  20 NOT A VARIABLE. IGNORED.
+ THERE ARE NO MINOS ERRORS TO CALCULATE.
+ PARAMETER NUMBER  21 NOT A VARIABLE. IGNORED.
+ THERE ARE NO MINOS ERRORS TO CALCULATE.
+New pars ( 382): DC=1.5383e+01 r2=1.1421e-02 r3=9.3411e-02 epsV=8.0526e-01 
+
+Fitting done in 800000 clicks (0.800000 seconds).
+Fit status = 4000
+Cov status = 1
+Fit valid? = 1
+
+****************************************
+Minimizer is Minuit / MigradImproved
+MinFCN                    =      483.084
+Chi2                      =      922.805
+NDf                       =          896
+Edm                       =  4.20223e-09
+NCalls                    =          158
+# Cyc's                   =          244                      	 (fixed)
+Bin width                 =          100                      	 (fixed)
+DC rate                   =      15.3834   +/-   0.0864477   
+Rate 1                    =            0                      	 (fixed)
+Rate 2                    =    0.0114212   +/-   0.000404338 
+Rate 3                    =    0.0934111   +/-   0.00246143  
+Capt eff                  =          0.6                      	 (fixed)
+Capt ret                  =            1                      	 (fixed)
+T eff                     =         0.87                      	 (fixed)
+U eff                     =            1                      	 (fixed)
+V eff                     =      0.80526   +/-   0.0111671   
+W eff                     =            0                      	 (fixed)
+X eff                     =            1                      	 (fixed)
+Y eff                     =            1                      	 (fixed)
+Z eff                     =            1                      	 (fixed)
+T1 loss                   =            0                      	 (fixed)
+T2 loss                   =       0.0052                      	 (fixed)
+T3 loss                   =       0.0052                      	 (fixed)
+U1 loss                   =        2e-10                      	 (fixed)
+U2 loss                   =        2e-10                      	 (fixed)
+U3 loss                   =        2e-10                      	 (fixed)
+
+Covariance Matrix:
+
+            	     DC rate      Rate 2      Rate 3       V eff
+DC rate     	   0.0074732  2.2992e-05  0.00011738  0.00071182
+Rate 2      	  2.2992e-05  1.6349e-07  6.4573e-07  3.5261e-06
+Rate 3      	  0.00011738  6.4573e-07  6.0586e-06  2.6297e-05
+V eff       	  0.00071182  3.5261e-06  2.6297e-05   0.0001247
+
+Correlation Matrix:
+
+            	     DC rate      Rate 2      Rate 3       V eff
+DC rate     	           1     0.65778     0.55163     0.73735
+Rate 2      	     0.65778           1     0.64881     0.78093
+Rate 3      	     0.55163     0.64881           1      0.9567
+V eff       	     0.73735     0.78093      0.9567           1
+
+Integrals computed in 250000 clicks (0.250000 seconds).
+Other integrals computed in 810000 clicks (0.810000 seconds).
+Errors computed in 510000 clicks (0.510000 seconds).
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+NUMBER OF BETAS DETECTED, by population:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+T1 integral = 0.0 +/- 0.0
+U1 integral = 0.0 +/- 0.0
+T2 integral = 13059.5 +/- 462.3
+U2 integral = 13156.1 +/- 487.1
+T3 integral = 81580.0 +/- 2149.7
+U3 integral = 106585.7 +/- 3521.2
+DC integral = 337819.7 +/- 1898.4
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Sum of above = 552201.0 +/- 4590.8 <-- no cov in unc
+All integral = 552331.0 +/- 743.4
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+U1 with trap emtpy = 0.0; trap full = 0.0
+U2 with trap emtpy = 6.9; trap full = 13129.2
+U3 with trap emtpy = 18076.5; trap full = 88524.9
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+BFit2 done. Timer = 2.2 sec.
+Elapsed time = 2.15 sec.
+
