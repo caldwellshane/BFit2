@@ -218,7 +218,8 @@ int BFit () {
 	TString separator = "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~";
 	cout << endl << separator << endl;
 	cout << "BETA SINGLES MODEL" << endl << separator << endl;
-	cout << "Case: " << stBDNCase.pcsCaseCode << endl;
+	cout << "BDN  Case: " << stBDNCase.pcsCaseCode << endl;
+	cout << "BFit Case: " << stBFitCase.pcsCaseCode << endl;
 	cout << "File: " << stBDNCase.pcsFilePath << endl;
 	cout << "Histogram: " << stBFitCase.pcsHistName << endl;
 	printf("Total cycle time\t= %10.3f s\n",	stBDNCase.dCycleTime);
@@ -267,6 +268,7 @@ int BFit () {
 //**************************************************************************
 // This one fits the data:
 	TF1 *fyAll	= new TF1("fyAll",yAll, 0.0, tCyc, nPars);
+	//TF1 *fyAll	= new TF1("fyAll",yAll, tBac, tCyc, nPars);
 	//TF1 *fyAll	= new TF1("fyAll",yAll, 30100.0, 36000.0, nPars);
 //**************************************************************************
 // Beta rates to be used by TF1::Integral() and TF1::IntegralError()
@@ -1269,7 +1271,8 @@ int BFit () {
 	
 	timerStop = clock();
 	cout << endl;
-	cout << "BFit2 done. Timer = " << (Float_t)timerStop/CLOCKS_PER_SEC << " sec." << endl;
+	cout << "BFit2 done, BFitCase " << stBFitCase.pcsCaseCode << endl;
+	cout << "Timer = " << (Float_t)timerStop/CLOCKS_PER_SEC << " sec." << endl;
 	cout << "Elapsed time = " << (Float_t)(timerStop-timerStart)/CLOCKS_PER_SEC << " sec." << endl << endl;
 	
 	delete [] lastPar;

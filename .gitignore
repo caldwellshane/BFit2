@@ -1,2 +1,5 @@
 .nfs*
 BFit.root
+*.root
+*.out
+
